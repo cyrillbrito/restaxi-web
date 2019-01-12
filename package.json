@@ -1,0 +1,30 @@
+{
+  "name": "restaxi-web",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyrillbrito/restaxi-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyrillbrito/restaxi-web/issues"
+  },
+  "homepage": "https://github.com/cyrillbrito/restaxi-web#readme",
+  "devDependencies": {
+    "css-loader": "^2.1.0",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "i18n-webpack-plugin": "^1.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
