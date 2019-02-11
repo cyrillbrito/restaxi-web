@@ -1,3 +1,6 @@
 {
-  "HELLO_WORLD": "Hello world"
+  "TITLE_TAG": "This is the title",
+  "MAIN_HEADER": "Taxis rest",
+  "MAIN_DESCRIPTION": "this is the main description"
+
 }

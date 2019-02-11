@@ -1,3 +1,11 @@
 {
-  "HELLO_WORLD": "Olá mundo"
+  "TITLE_TAG": "Titulo",
+  "MAIN_HEADER": "Taxis restauracao",
+  "MAIN_HEADER_DESCRIPTION": "granda description",
+  "CALL_TO_ACTION": "CTA-Call us",
+  "CONTACTS_HEADER": "Contatos",
+  "CONTACTS_HEADER_DESCRIPTION": "Contatos deciptionee",
+  "TELEPHONE_HEADER": "Telephone",
+  "PHONE_HEADER": "Phone",
+  "EMAIL_HEADER": "Email"
 }

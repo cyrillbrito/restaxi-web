@@ -1,5 +1,11 @@
 
-.title {
-  color: darkblue;
-  background-color: lightblue;
+.evenly-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 20rem;
+  height: 25rem;
+  border: 3px solid gray;
 }
