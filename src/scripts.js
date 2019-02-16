@@ -8,6 +8,9 @@ function init() {
   const languageElement = document.getElementById(language + '-a');
   languageElement.classList.add('selected-lang-a');
   languageElement.href = 'javascript:;';
+
+  const htmlElement = document.getElementsByTagName('html')[0];
+  htmlElement.lang = language;
 }
 
 function detectLanguage() {

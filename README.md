@@ -38,6 +38,14 @@ https://socialdribbler.com/20-tips-to-improve-your-page-speed-for-user-experienc
 
 https://web.dev/
 
+https://moz.com/blog/the-international-seo-checklist
+
+https://validator.w3.org/
+
+https://webhint.io/scanner/63ce159c-57aa-427e-bb2d-4fe904d81a25
+
+Google PageSpeed
+
 ## SEO 
 
 1. Description meta
