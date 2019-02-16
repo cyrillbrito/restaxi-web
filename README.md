@@ -37,3 +37,9 @@ https://frontendchecklist.io/
 https://socialdribbler.com/20-tips-to-improve-your-page-speed-for-user-experience-and-seo/
 
 https://web.dev/
+
+## SEO 
+
+1. Description meta
+    No more than 150 characters
+

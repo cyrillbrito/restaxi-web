@@ -3,31 +3,38 @@
 
 <head>
   <meta charset="UTF-8">
-  <title><%=__("TITLE_TAG")%></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<%=__('DESCRIPTION_TAG')%>">
+
+  <link rel="alternate" href="<%=__('URL')%>" hreflang="pt" />
+  <link rel="alternate" href="<%=__('URL')%>/fr" hreflang="fr" />
+  <link rel="alternate" href="<%=__('URL')%>/en" hreflang="en" />
+
+  <title><%=__('TITLE_TAG')%></title>
 </head>
 
 <body>
 
-  <a id="pt-a" class="lang-a" href="https://taxisrestauracao.pt">Português</a>
-  <a id="fr-a" class="lang-a" href="https://taxisrestauracao.pt/fr">Francais</a>
-  <a id="en-a" class="lang-a" href="https://taxisrestauracao.pt/en">English</a>
+  <a id="pt-a" class="lang-a" href="<%=__('URL')%>">Português</a>
+  <a id="fr-a" class="lang-a" href="<%=__('URL')%>/fr">Francais</a>
+  <a id="en-a" class="lang-a" href="<%=__('URL')%>/en">English</a>
 
-  <h1><%=__("MAIN_HEADER")%></h1>
-  <p><%=__("MAIN_HEADER_DESCRIPTION")%></p>
-  <button><%=__("CALL_TO_ACTION")%></button>
+  <h1><%=__('MAIN_HEADER')%></h1>
+  <p><%=__('MAIN_HEADER_DESCRIPTION')%></p>
+  <button><%=__('CALL_TO_ACTION')%></button>
 
-  <h2><%=__("CONTACTS_HEADER")%></h2>
-  <p><%=__("CONTACTS_HEADER_DESCRIPTION")%></p>
+  <h2><%=__('CONTACTS_HEADER')%></h2>
+  <p><%=__('CONTACTS_HEADER_DESCRIPTION')%></p>
 
   <div class="evenly-container">
     <div class="box">
-      <h3><%=__("TELEPHONE_HEADER")%></h3>
+      <h3><%=__('TELEPHONE_HEADER')%></h3>
     </div>
     <div class="box">
-      <h3><%=__("PHONE_HEADER")%></h3>
+      <h3><%=__('PHONE_HEADER')%></h3>
     </div>
     <div class="box">
-      <h3><%=__("EMAIL_HEADER")%></h3>
+      <h3><%=__('EMAIL_HEADER')%></h3>
     </div>
   </div>
 
