@@ -7,7 +7,7 @@
 
 .box {
   width: 20rem;
-  height: 25rem;
+  min-height: 25rem;
   border: 0.2em solid gray;
 }
 
@@ -27,6 +27,14 @@
   width: 10em;
 }
 
+/* social proof */
+.sp-star {
+  fill: gold;
+  width: 1em;
+  height: 1em;
+}
+
+/* footer */
 .socialmedia-svg {
   fill: darkblue;
   width: 10em;
