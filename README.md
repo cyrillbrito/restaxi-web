@@ -30,9 +30,9 @@ https://muffingroup.com/blog/best-free-fonts/
 
 https://github.com/leungwensen/svg-icon
 
-## TODO
+## Checklists
 
-https://frontendchecklist.io/
+[checked] https://frontendchecklist.io/
 
 https://socialdribbler.com/20-tips-to-improve-your-page-speed-for-user-experience-and-seo/
 
