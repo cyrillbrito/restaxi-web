@@ -2,12 +2,13 @@
 .evenly-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .box {
   width: 20rem;
   height: 25rem;
-  border: 3px solid gray;
+  border: 0.2em solid gray;
 }
 
 
@@ -19,4 +20,9 @@
 .selected-lang-a {
   cursor: default;
   font-weight: bold;
+}
+
+.contacts-svg {
+  fill: darkslategray;
+  width: 10em;
 }
