@@ -27,146 +27,158 @@
 
 <body>
 
-  <a id="pt-a" class="lang-a" href="<%=__('URL')%>">Português</a>
-  <a id="fr-a" class="lang-a" href="<%=__('URL')%>/fr">Francais</a>
-  <a id="en-a" class="lang-a" href="<%=__('URL')%>/en">English</a>
+  <header>
 
-  <h1><%=__('MAIN_HEADER')%></h1>
-  <p><%=__('MAIN_HEADER_DESCRIPTION')%></p>
-  <a id="cta-a"></a>
+    <a id="pt-a" class="lang-a" href="<%=__('URL')%>">Português</a>
+    <a id="fr-a" class="lang-a" href="<%=__('URL')%>/fr">Francais</a>
+    <a id="en-a" class="lang-a" href="<%=__('URL')%>/en">English</a>
 
-  <h2><%=__('CONTACTS_HEADER')%></h2>
-  <p><%=__('CONTACTS_HEADER_DESCRIPTION')%></p>
+    <h1><%=__('MAIN_HEADER')%></h1>
+    <p><%=__('MAIN_HEADER_DESCRIPTION')%></p>
+    <a id="cta-a"></a>
 
-  <div class="evenly-container">
+  </header>
+
+  <main>
+
+    <!-- Contacts -->
+    <section>
+
+      <h2><%=__('CONTACTS_HEADER')%></h2>
+      <p><%=__('CONTACTS_HEADER_DESCRIPTION')%></p>
+
+      <div class="evenly-container">
+
+        <div class="box">
+
+          <svg class="contacts-svg">
+            <use xlink:href="#svg-phone">
+          </svg>
+          <h3><%=__('PHONE_HEADER')%></h3>
+          964468494
+        </div>
+
+        <div class="box">
+          <svg class="contacts-svg">
+            <use xlink:href="#svg-mail">
+          </svg>
+          <h3><%=__('EMAIL_HEADER')%></h3>
+          test@taxisrestauracao.pt
+        </div>
+
+        <!-- Get a third contact -->
+
+      </div>
+
+    </section>
+
+    <h2>Features and Benefits</h2>
+    <p>Features and Benefits desc</p>
 
     <div class="box">
-
-      <svg class="contacts-svg">
-        <use xlink:href="#svg-phone">
-      </svg>
-      <h3><%=__('PHONE_HEADER')%></h3>
-      964468494
+      <h3>right</h3>
+    </div>
+    <div class="box">
+      <h3>left</h3>
+    </div>
+    <div class="box">
+      <h3>right</h3>
     </div>
 
-    <div class="box">
-      <svg class="contacts-svg">
-        <use xlink:href="#svg-mail">
-      </svg>
-      <h3><%=__('EMAIL_HEADER')%></h3>
-      test@taxisrestauracao.pt
-    </div>
+    <h2>Credibility / Social Proof</h2>
+    <p>Slider of reviews / Companies</p>
 
-    <!-- Get a third contact -->
+    <!-- hide last names -->
+    <div class="evenly-container">
 
-  </div>
+      <!-- review 1 -->
+      <div class="box">
+        <p>Sérgio Guerreiro:</p>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <p>Excelente.</p>
+        <a href="https://www.facebook.com/sergio.guerreiro.547/activity/2041668049194365">Posted on Facebook</a>
+      </div>
 
-  <h2>Features and Benefits</h2>
-  <p>Features and Benefits desc</p>
+      <!-- review 2 -->
+      <div class="box">
+        <p>Paula Guerreiro:</p>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <p>Excelentes profissionais recomendo</p>
+        <a href="https://goo.gl/maps/69s5QQvza1w">Posted on Google</a>
+      </div>
 
-  <div class="box">
-    <h3>right</h3>
-  </div>
-  <div class="box">
-    <h3>left</h3>
-  </div>
-  <div class="box">
-    <h3>right</h3>
-  </div>
+      <!-- review 3 -->
+      <div class="box">
+        <p>Ghassan Ghosn:</p>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <a href="https://www.google.com/maps/place/T%C3%A1xi+Restaura%C3%A7%C3%A3o+-+Olh%C3%A3o/@37.0732312,-7.8308391,12.5z/data=!4m13!1m5!8m4!1e1!2s114160475173232270805!3m1!1e1!3m6!1s0xd1aac858111e223:0xd9e38198690d5740!8m2!3d37.0645815!4d-7.805374!9m1!1b1?hl=en-PT">Posted on Google</a>
+      </div>
 
-  <h2>Credibility / Social Proof</h2>
-  <p>Slider of reviews / Companies</p>
+      <!-- review 4 -->
+      <div class="box">
+        <p>Laeticia Brito:</p>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <svg class="sp-star">
+          <use xlink:href="#svg-star">
+        </svg>
+        <a href="https://www.google.com/maps/place/T%C3%A1xi+Restaura%C3%A7%C3%A3o+-+Olh%C3%A3o/@37.0732312,-7.8308391,12.5z/data=!4m13!1m5!8m4!1e1!2s114160475173232270805!3m1!1e1!3m6!1s0xd1aac858111e223:0xd9e38198690d5740!8m2!3d37.0645815!4d-7.805374!9m1!1b1?hl=en-PT">Posted on Google</a>
+      </div>
 
-  <div class="evenly-container">
-
-    <!-- review 1 -->
-    <div class="box">
-      <p>Sérgio Guerreiro:</p>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <p>Excelente.</p>
-      <a href="https://www.facebook.com/sergio.guerreiro.547/activity/2041668049194365">Posted on Facebook</a>
-    </div>
-
-    <!-- review 2 -->
-    <div class="box">
-      <p>Paula Guerreiro:</p>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <p>Excelentes profissionais recomendo</p>
-      <a href="https://goo.gl/maps/69s5QQvza1w">Posted on Google</a>
-    </div>
-
-    <!-- review 3 -->
-    <div class="box">
-      <p>Ghassan Ghosn:</p>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <a href="https://www.google.com/maps/place/T%C3%A1xi+Restaura%C3%A7%C3%A3o+-+Olh%C3%A3o/@37.0732312,-7.8308391,12.5z/data=!4m13!1m5!8m4!1e1!2s114160475173232270805!3m1!1e1!3m6!1s0xd1aac858111e223:0xd9e38198690d5740!8m2!3d37.0645815!4d-7.805374!9m1!1b1?hl=en-PT">Posted on Google</a>
-    </div>
-
-    <!-- review 4 -->
-    <div class="box">
-      <p>Laeticia Brito:</p>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <svg class="sp-star">
-        <use xlink:href="#svg-star">
-      </svg>
-      <a href="https://www.google.com/maps/place/T%C3%A1xi+Restaura%C3%A7%C3%A3o+-+Olh%C3%A3o/@37.0732312,-7.8308391,12.5z/data=!4m13!1m5!8m4!1e1!2s114160475173232270805!3m1!1e1!3m6!1s0xd1aac858111e223:0xd9e38198690d5740!8m2!3d37.0645815!4d-7.805374!9m1!1b1?hl=en-PT">Posted on Google</a>
-    </div>
-
-    <!-- review 5 -->
-    <div class="box">
+      <!-- review 5 -->
+      <div class="box">
         <p>Carlos Corvo:</p>
         <svg class="sp-star">
           <use xlink:href="#svg-star">
@@ -185,23 +197,25 @@
         </svg>
         <a href="https://www.google.com/maps/place/T%C3%A1xi+Restaura%C3%A7%C3%A3o+-+Olh%C3%A3o/@37.0732312,-7.8308391,12.5z/data=!4m13!1m5!8m4!1e1!2s114160475173232270805!3m1!1e1!3m6!1s0xd1aac858111e223:0xd9e38198690d5740!8m2!3d37.0645815!4d-7.805374!9m1!1b1?hl=en-PT">Posted on Google</a>
       </div>
-  </div>
+    </div>
 
+  </main>
 
+  <footer>
 
+    <a href="https://www.facebook.com/T%C3%A1xis-Restaura%C3%A7%C3%A3o-1930601007261807" target="_blank" rel="noopener">
+      <svg class="socialmedia-svg">
+        <use xlink:href="#svg-facebook">
+      </svg>
+    </a>
 
+    <a href="https://www.instagram.com/taxisrestauracao" target="_blank" rel="noopener">
+      <svg class="socialmedia-svg">
+        <use xlink:href="#svg-instagram">
+      </svg>
+    </a>
 
-  <a href="https://www.facebook.com/T%C3%A1xis-Restaura%C3%A7%C3%A3o-1930601007261807" target="_blank" rel="noopener">
-    <svg class="socialmedia-svg">
-      <use xlink:href="#svg-facebook">
-    </svg>
-  </a>
-
-  <a href="https://www.instagram.com/taxisrestauracao" target="_blank" rel="noopener">
-    <svg class="socialmedia-svg">
-      <use xlink:href="#svg-instagram">
-    </svg>
-  </a>
+  </footer>
 
   <!-- define all svg -->
   <svg style="display:none">
