@@ -1,4 +1,21 @@
 
+/*********** Global ***********/
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fx-container {
+  display: flex;
+  align-items: center;
+}
+
+.fx-right {
+  margin-left: auto;
+  order: 99;
+}
+
 .evenly-container {
   display: flex;
   justify-content: space-evenly;
@@ -11,9 +28,38 @@
   border: 0.2em solid gray;
 }
 
+/*********** Header ***********/
+
+header {
+  background-color: #17C68C;
+  color: #fff;
+}
+
+/**** Brand ****/
+.brand-logo {
+  margin-left: 5%; 
+  width: 4em;
+  height: 4em;
+}
+
+.brand-name {
+  margin-left: 0.1em;
+  font-size: 5em;
+  /* font-size: 5vw; */
+  font-family: 'Oleo Script', cursive;
+  text-shadow: -2px 1px #26282b;
+}
+
+@media (max-width: 500px) {
+  .brand-name {
+    font-size: 1em;
+  }
+}
+
+/**** Languages ****/
 
 .lang-a, .lang-a:active, .lang-a:hover {
-  color: #000;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -22,19 +68,23 @@
   font-weight: bold;
 }
 
+/*********** Contats ***********/
+
 .contacts-svg {
   fill: darkslategray;
   width: 10em;
 }
 
-/* social proof */
+/*********** Social Proof ***********/
+
 .sp-star {
   fill: gold;
   width: 1em;
   height: 1em;
 }
 
-/* footer */
+/*********** Footer ***********/
+
 .socialmedia-svg {
   fill: darkblue;
   width: 10em;
