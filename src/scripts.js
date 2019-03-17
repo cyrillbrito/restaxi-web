@@ -1,6 +1,7 @@
 import './styles.css';
 
 let language;
+let isDropdownOpen = false;
 
 function init() {
   detectLanguage();
@@ -18,6 +19,17 @@ function init() {
   const ctaElement = document.getElementById('cta-a');
   ctaElement.innerText = isPhone() ? __('CTA_CALL') : __('CTA_CONTACTS');
   ctaElement.href = isPhone() ? 'tel:+351964468494' : __('URL') + '#contacts';
+
+  // add dropdown open and close event
+  const dropdownItemsElement = document.getElementById('dropdown-items');
+  const dropdownLabelElement = document.getElementById('dropdown-label');
+  window.addEventListener('click', (e) => {
+    if (dropdownLabelElement.contains(e.target)) {
+      openCloseDropdown();
+    } else if (!dropdownItemsElement.contains(e.target) && isDropdownOpen) {
+      openCloseDropdown();
+    }
+  });
 }
 
 function detectLanguage() {
@@ -37,6 +49,11 @@ function isPhone() {
     return true;
   else
     return false;
+}
+
+function openCloseDropdown() {
+  document.getElementById('dropdown-items').classList.toggle('hide');
+  isDropdownOpen = !isDropdownOpen;
 }
 
 // main
