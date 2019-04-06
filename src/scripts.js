@@ -16,9 +16,7 @@ function init() {
   htmlElement.lang = language;
 
   // setup call to action
-  const ctaElement = document.getElementById('cta-a');
-  ctaElement.innerText = isPhone() ? __('CTA_CALL') : __('CTA_CONTACTS');
-  ctaElement.href = isPhone() ? 'tel:+351964468494' : __('URL') + '#contacts';
+  initCallToAction();
 
   // add dropdown open and close event
   const dropdownItemsElement = document.getElementById('dropdown-items');
@@ -40,6 +38,19 @@ function detectLanguage() {
     language = 'fr';
   } else {
     language = 'pt';
+  }
+}
+
+function initCallToAction() {
+  const anchorElement = document.getElementById('cta-a');
+  const buttonElement = document.getElementById('cta-button');
+  if (isPhone()) {
+    anchorElement.href = 'tel:+351964468494';
+    buttonElement.innerHTML = __('CTA_CALL')
+  } else {
+    anchorElement.href = __('URL') + '#contacts';
+    buttonElement.classList.add('desktop');
+    buttonElement.innerHTML = '<div class="fx">' + __('CTA_CONTACTS') + '</div><div class="fx center"><svg class="cta-arrow"><use xlink:href="#svg-arrow"></svg></div>';
   }
 }
 

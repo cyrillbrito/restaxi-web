@@ -1,25 +1,32 @@
 
 /*********** Global ***********/
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
 
-.fx-container {
+.fx {
   display: flex;
   align-items: center;
+}
+
+.fx.evenly {
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.fx.center {
+  justify-content: center;
 }
 
 .fx-right {
   margin-left: auto;
   order: 99;
-}
-
-.evenly-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
 }
 
 .box {
@@ -37,6 +44,7 @@ body {
 header {
   background-color: #14A475;
   color: #fff;
+  height: 200em;
 }
 
 /**** Brand ****/
@@ -137,7 +145,43 @@ header {
   width: 1rem;
   height: 1rem;
   transform: rotate(90deg);
-  color: #fff;
+  fill: #fff;
+}
+
+.cta-button {
+  border-radius: 5px;
+  background-color: #8a4fda;
+  color: white;
+  border: none;
+  font-weight: bolder;
+  font-size: 1.5em;
+  padding: 1em 1em 1em 1em;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.cta-button:hover {
+  background: #9f6fe1;
+  font-size: 1.7em;
+  transition: .3s;
+}
+
+.cta-button:hover .cta-arrow {
+  width: 2.4rem;
+  height: 2.4rem;
+  transition: .3s;
+}
+
+.cta-button.desktop {
+  padding: 1em 1em 0.7em 1em;
+}
+
+.cta-arrow {
+  width: 2rem;
+  height: 2rem;
+  transform: rotate(90deg);
+  fill: #fff;
+  transition: .3s;
 }
 
 /*********** Contats ***********/

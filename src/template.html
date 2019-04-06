@@ -31,7 +31,7 @@
 
   <header>
 
-    <div class="fx-container">
+    <div class="fx">
       <img class="brand-logo" src="<%=__('URL')%>/favicon.ico">
       <div class="brand-name">Táxis-Restauração</div>
 
@@ -40,7 +40,8 @@
           Português
           <svg class="dropdown-arrow">
             <use xlink:href="#svg-arrow">
-          </svg></div>
+          </svg>
+        </div>
         <div id="dropdown-items" class="dropdown-container hide">
           <a id="pt-a" class="lang-a" href="<%=__('URL')%>">
             <div class="dropdown-item">Português</div>
@@ -59,42 +60,31 @@
 
     </div>
 
-    <h1><%=__('MAIN_HEADER')%></h1>
+    <h1>
+      <p><%=__('MAIN_HEADER')%></p>
+      <p></p>
+    </h1>
     <p><%=__('MAIN_HEADER_DESCRIPTION')%></p>
-    <a id="cta-a"></a>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <!-- Call to action [cta] -->
+    <div class="fx center">
+      <a id="cta-a">
+        <button id="cta-button" class="cta-button">
+        </button>
+      </a>
+    </div>
 
   </header>
 
   <main>
 
     <!-- Contacts -->
-    <section>
+    <section id="contacts">
 
       <h2><%=__('CONTACTS_HEADER')%></h2>
       <p><%=__('CONTACTS_HEADER_DESCRIPTION')%></p>
 
-      <div class="evenly-container">
+      <div class="fx evenly">
 
         <div class="box">
 
