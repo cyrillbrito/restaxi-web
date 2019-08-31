@@ -19,12 +19,12 @@ function init() {
   initCallToAction();
 
   // add dropdown open and close event
-  const dropdownItemsElement = document.getElementById('dropdown-items');
-  const dropdownLabelElement = document.getElementById('dropdown-label');
+  const dropdownElement = document.getElementById('dropdown');
+  const dropdownListElement = document.getElementById('dropdown-list');
   window.addEventListener('click', (e) => {
-    if (dropdownLabelElement.contains(e.target)) {
+    if (dropdownElement.contains(e.target)) {
       openCloseDropdown();
-    } else if (!dropdownItemsElement.contains(e.target) && isDropdownOpen) {
+    } else if (!dropdownListElement.contains(e.target) && isDropdownOpen) {
       openCloseDropdown();
     }
   });
@@ -63,7 +63,7 @@ function isPhone() {
 }
 
 function openCloseDropdown() {
-  document.getElementById('dropdown-items').classList.toggle('hide');
+  document.getElementById('dropdown').classList.toggle('open');
   isDropdownOpen = !isDropdownOpen;
 }
 

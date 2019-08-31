@@ -41,7 +41,7 @@ body {
 /*********** Header ***********/
 
 header {
-  background-color: #14A475;
+  /* background-color: #14A475; */
   color: #fff;
   height: 200em;
 }
@@ -81,47 +81,88 @@ header {
   font-weight: bold;
 }
 
-#dropdown-box {
+#dropdown {
   max-width: 320px;
   min-width: 100px;
   width: 50%;
   height: 44px;
   background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
   border-radius: 4px;
   margin-left: auto;
   margin-right: 50px;
   display: flex;
+  position: relative;
+  cursor: pointer;
 }
 
-#dropdown-box label {
+#dropdown label {
   font-family: Montserrat;
   font-size: 14px;
-  line-height: 44px;
+  line-height: 42px;
   color: rgba(31, 32, 65, 0.75);
   flex-grow: 1;
   margin-left: 15px;
+  cursor: pointer;
 }
 
-#dropdown-box svg {
+#dropdown svg {
   width: 13px;
   height: 8px;
   margin: 18px;
   color: rgba(31, 32, 65, 0.5);
 }
 
+#dropdown.open {
+  border-color: rgba(31, 32, 65, 0.5);
+  border-radius: 4px 4px 0 0;
+}
+
+#dropdown-list {
+  position: absolute;
+  width: 100%;
+  left: -1px;
+  top: 42px;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  /* border-top-width: 0; */
+  border-radius: 0 0 4px 4px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+#dropdown.open #dropdown-list {
+  opacity: 1;
+}
+
+#dropdown-list a {
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+  padding-left: 15px;
+}
+
+#dropdown-list a:hover {
+  background-color: #BC9CFF;
+  color: white;
+}
 
 @media (max-width: 700px) {
-  #dropdown-box {
+  #dropdown {
     height: 32px;
   }
 
-  #dropdown-box label {
+  #dropdown label {
     font-size: 11px;
-    line-height: 32px;
+    line-height: 30px;
     margin-left: 10px;
   }
 
-  #dropdown-box svg {
+  #dropdown svg {
     width: 13px;
     height: 8px;
     margin: 12px;
