@@ -28,6 +28,10 @@ function init() {
       openCloseDropdown();
     }
   });
+
+  // setup circle style
+  calcCircles();
+  window.onresize = calcCircles;
 }
 
 function detectLanguage() {
@@ -65,6 +69,20 @@ function isPhone() {
 function openCloseDropdown() {
   document.getElementById('dropdown').classList.toggle('open');
   isDropdownOpen = !isDropdownOpen;
+}
+
+function calcCircles() {
+
+  const w = document.documentElement.clientWidth;
+  const h = document.documentElement.clientHeight;
+
+  const circle = document.getElementById('circle').style;
+
+  circle.width = w * 3 + 'px';
+  circle.height = w + 'px';
+
+  circle.marginLeft = -w * 1.5 + 'px';
+  circle.marginTop = -w + h * 0.9 + 'px';
 }
 
 // main

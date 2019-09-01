@@ -38,6 +38,15 @@ body {
   visibility: hidden;
 }
 
+h1 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 42px;
+  line-height: 52px;
+  color: #FFFFFF;
+}
+
 /*********** Header ***********/
 
 header {
@@ -67,6 +76,13 @@ header {
   }
 }
 
+#circle {
+  border-radius: 100%;
+  background: #1F2041;
+  z-index: -1;
+  position: absolute;
+}
+
 /**** Languages ****/
 
 .lang-a,
@@ -80,6 +96,8 @@ header {
   cursor: default;
   font-weight: bold;
 }
+
+/* #region dropdown */
 
 #dropdown {
   max-width: 320px;
@@ -168,6 +186,8 @@ header {
     margin: 12px;
   }
 }
+
+/* #endregion */
 
 .cta-button {
   border-radius: 5px;
