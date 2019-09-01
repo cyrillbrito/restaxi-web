@@ -50,11 +50,11 @@ function initCallToAction() {
   const buttonElement = document.getElementById('cta-button');
   if (isPhone()) {
     anchorElement.href = 'tel:+351964468494';
-    buttonElement.innerHTML = __('CTA_CALL')
+    buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#phone_in_talk"></svg><label>' + __('CTA_CALL') + '</label>';
   } else {
     anchorElement.href = __('URL') + '#contacts';
-    buttonElement.classList.add('desktop');
-    buttonElement.innerHTML = '<div class="fx">' + __('CTA_CONTACTS') + '</div><div class="fx center"><svg class="cta-arrow"><use xlink:href="#svg-arrow"></svg></div>';
+    // buttonElement.classList.add('desktop');
+    buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#arrow_downward"></svg><label>' + __('CTA_CONTACTS') + '</label>';
   }
 }
 
@@ -83,6 +83,8 @@ function calcCircles() {
 
   circle.marginLeft = -w * 1.5 + 'px';
   circle.marginTop = -w + h * 0.9 + 'px';
+
+  document.getElementsByTagName('header')[0].style.height = h * 0.9 + 'px';
 }
 
 // main

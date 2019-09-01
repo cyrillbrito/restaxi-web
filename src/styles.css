@@ -44,15 +44,68 @@ h1 {
   font-weight: normal;
   font-size: 42px;
   line-height: 52px;
+
   color: #FFFFFF;
 }
+
+h3 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+
+  color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  height: 44px;
+
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 22px;
+  border: none;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 44px;
+  text-transform: uppercase;
+
+  color: #FFFFFF;
+
+  display: flex;
+  cursor: pointer;
+}
+
+button label {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+button svg {
+  margin: 13px;
+}
+
 
 /*********** Header ***********/
 
 header {
-  /* background-color: #14A475; */
-  color: #fff;
-  height: 200em;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-left: 100px;
+}
+
+header h3 {
+  margin-left: 100px;
+  max-width: 35%;
 }
 
 /**** Brand ****/
@@ -189,42 +242,6 @@ header {
 
 /* #endregion */
 
-.cta-button {
-  border-radius: 5px;
-  background-color: #8a4fda;
-  color: white;
-  border: none;
-  font-weight: bolder;
-  font-size: 1.5em;
-  padding: 1em 1em 1em 1em;
-  cursor: pointer;
-  transition: .3s;
-}
-
-.cta-button:hover {
-  background: #9f6fe1;
-  font-size: 1.7em;
-  transition: .3s;
-}
-
-.cta-button:hover .cta-arrow {
-  width: 2.4rem;
-  height: 2.4rem;
-  transition: .3s;
-}
-
-.cta-button.desktop {
-  padding: 1em 1em 0.7em 1em;
-}
-
-.cta-arrow {
-  width: 2rem;
-  height: 2rem;
-  transform: rotate(90deg);
-  fill: #fff;
-  transition: .3s;
-}
-
 /*********** Contats ***********/
 
 .contacts-svg {
@@ -245,4 +262,12 @@ header {
 .socialmedia-svg {
   fill: darkblue;
   width: 10em;
+}
+
+
+
+/*********** SVG ***********/
+.icon-18 {
+  width: 18px;
+  height: 18px;
 }
