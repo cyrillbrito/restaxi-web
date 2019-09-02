@@ -7,11 +7,12 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  background-color: #F4F4F6;
+  overflow-x: hidden;
 }
 
 .fx {
   display: flex;
-  align-items: center;
 }
 
 .fx.evenly {
@@ -27,6 +28,11 @@ body {
   margin-left: auto;
   order: 99;
 }
+
+.fx.column {
+  flex-direction: column;
+}
+
 
 .box {
   width: 20rem;
@@ -44,7 +50,6 @@ h1 {
   font-weight: normal;
   font-size: 42px;
   line-height: 52px;
-
   color: #FFFFFF;
 }
 
@@ -56,6 +61,29 @@ h3 {
   line-height: 30px;
 
   color: #FFFFFF;
+}
+
+h4 {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1F2041;
+
+  margin: 0;
+}
+
+h5 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: rgba(31, 32, 65, 0.75);
+
+  margin: 0;
 }
 
 a {
@@ -242,7 +270,36 @@ header h3 {
 
 /* #endregion */
 
+/* #region box */
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 280px;
+
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  padding: 30px 40px 40px 40px;
+}
+
+
+/* #endregion */
+
+
+
+
+
 /*********** Contats ***********/
+
+
+
+
+
 
 .contacts-svg {
   fill: darkslategray;
@@ -270,4 +327,9 @@ header h3 {
 .icon-18 {
   width: 18px;
   height: 18px;
+}
+
+.icon-64-48 {
+  width: 64px;
+  height: 48px;
 }
