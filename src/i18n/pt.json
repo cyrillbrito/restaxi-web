@@ -8,7 +8,9 @@
   "CTA_CONTACTS": "Ver Contactos",
   "CONTACTS_HEADER": "Contatos",
   "CONTACTS_HEADER_DESCRIPTION": "Contatos deciptionee",
-  "TELEPHONE_HEADER": "Telephone",
-  "PHONE_HEADER": "Phone",
-  "EMAIL_HEADER": "Email"
+  "PHONE_HEADER": "Telemovel",
+  "PHONE_DESCRIPTION": "Forma mais rapida de comunicar com um taxista, a qualquer altura do dia",
+  "EMAIL_HEADER": "Email",
+  "EMAIL_DESCRIPTION": "Quer marcar um taxi?<br>Quer tirar alguma duvida?<br>Envie nos um email, nos respondemos o mais rapido possivel.",
+  "EMAIL_SEND": "Enviar email"
 }

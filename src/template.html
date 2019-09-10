@@ -75,7 +75,7 @@
 
     <!-- Call to action -->
     <a id="cta-a">
-      <button id="cta-button">
+      <button id="cta-button" class="gradient">
       </button>
     </a>
 
@@ -88,7 +88,6 @@
     <section id="contacts">
 
       <h2><%=__('CONTACTS_HEADER')%></h2>
-      <p><%=__('CONTACTS_HEADER_DESCRIPTION')%></p>
 
       <div class="card-container">
 
@@ -97,11 +96,20 @@
             <svg class="icon-64-48">
               <use xlink:href="#contact_phone">
             </svg>
-            <div class="fx column">
+            <div class="card-header-group">
               <h4><%=__('PHONE_HEADER')%></h4>
               <h5>+351 912 227 77</h5>
             </div>
           </div>
+          <div class="card-description">
+            <p><%=__('PHONE_DESCRIPTION')%></p>
+          </div>
+          <button class="full-width">
+            <svg class="icon-18">
+              <use xlink:href="#phone_in_talk">
+            </svg>
+            <label><%=__('CTA_CALL')%></label>
+          </button>
         </div>
 
         <div class="card">
@@ -109,39 +117,23 @@
             <svg class="icon-64-48">
               <use xlink:href="#contact_mail">
             </svg>
-            <div class="fx column">
+            <div class="card-header-group">
               <h4><%=__('EMAIL_HEADER')%></h4>
               <h5>test@taxisrestauracao.pt</h5>
             </div>
           </div>
+          <div class="card-description">
+            <p><%=__('EMAIL_DESCRIPTION')%></p>
+          </div>
+          <button class="full-width">
+            <svg class="icon-20-18">
+              <use xlink:href="#email">
+            </svg>
+            <label><%=__('EMAIL_SEND')%></label>
+          </button>
         </div>
 
       </div>
-
-
-      <div class="fx evenly">
-
-        <div class="box">
-
-          <svg class="contacts-svg">
-            <use xlink:href="#contact_phone">
-          </svg>
-          <h3><%=__('PHONE_HEADER')%></h3>
-          964468494
-        </div>
-
-        <div class="box">
-          <svg class="contacts-svg">
-            <use xlink:href="#svg-mail">
-          </svg>
-          <h3><%=__('EMAIL_HEADER')%></h3>
-          test@taxisrestauracao.pt
-        </div>
-
-        <!-- Get a third contact -->
-
-      </div>
-
     </section>
 
     <h2>Features and Benefits</h2>
@@ -334,6 +326,10 @@
       <symbol width="64" height="48" viewBox="0 0 64 48" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path id="contact_mail" d="M58.625 24V8H37.375V24H58.625ZM37.375 40V37.375C37.375 34.9583 35.5417 33 31.875 31.5C28.2083 29.9167 24.7083 29.125 21.375 29.125C18.0417 29.125 14.5417 29.9167 10.875 31.5C7.20833 33 5.375 34.9583 5.375 37.375V40H37.375ZM27 10.375C25.4167 8.79167 23.5417 8 21.375 8C19.2083 8 17.3333 8.79167 15.75 10.375C14.1667 11.9583 13.375 13.8333 13.375 16C13.375 18.1667 14.1667 20.0417 15.75 21.625C17.3333 23.2083 19.2083 24 21.375 24C23.5417 24 25.4167 23.2083 27 21.625C28.5833 20.0417 29.375 18.1667 29.375 16C29.375 13.8333 28.5833 11.9583 27 10.375ZM58.625 0C60.0417 0 61.2917 0.541667 62.375 1.625C63.4583 2.70833 64 3.95833 64 5.375V42.625C64 44.0417 63.4583 45.2917 62.375 46.375C61.2917 47.4583 60.0417 48 58.625 48H5.375C3.95833 48 2.70833 47.4583 1.625 46.375C0.541667 45.2917 0 44.0417 0 42.625V5.375C0 3.95833 0.541667 2.70833 1.625 1.625C2.70833 0.541667 3.95833 0 5.375 0H58.625ZM56 13.375L48 18.625L40 13.375V10.625L48 16L56 10.625V13.375Z" fill="url(#paint0_linear)" />
       </symbol>
+      <symbol width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="email" d="M18.0156 5.01562V3L10 8.01562L1.98438 3V5.01562L10 9.98438L18.0156 5.01562ZM18.0156 0.984375C18.5469 0.984375 19 1.1875 19.375 1.59375C19.7812 2 19.9844 2.46875 19.9844 3V15C19.9844 15.5312 19.7812 16 19.375 16.4062C19 16.8125 18.5469 17.0156 18.0156 17.0156H1.98438C1.45312 17.0156 0.984375 16.8125 0.578125 16.4062C0.203125 16 0.015625 15.5312 0.015625 15V3C0.015625 2.46875 0.203125 2 0.578125 1.59375C0.984375 1.1875 1.45312 0.984375 1.98438 0.984375H18.0156Z" fill="white" />
+      </symbol>
+
 
 
     </defs>
