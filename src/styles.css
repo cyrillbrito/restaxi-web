@@ -1,14 +1,15 @@
 /*********** Global ***********/
 
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
   background-color: #F4F4F6;
   overflow-x: hidden;
+  position: relative
 }
 
 .fx {
@@ -45,7 +46,7 @@ h1 {
   font-weight: normal;
   font-size: 42px;
   line-height: 52px;
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 h2 {
@@ -65,7 +66,7 @@ h3 {
   font-size: 24px;
   line-height: 30px;
 
-  color: #FFFFFF;
+  color: #FFF;
 }
 
 h4 {
@@ -119,7 +120,7 @@ button {
   line-height: 44px;
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: #FFF;
 
   display: flex;
   cursor: pointer;
@@ -161,6 +162,13 @@ header h3 {
 }
 
 /**** Brand ****/
+
+.brand-line {
+  margin: 20px;
+  display:flex;
+  align-items: center;
+}
+
 .brand-logo {
   margin-left: 5%;
   width: 4em;
@@ -169,16 +177,23 @@ header h3 {
 
 .brand-name {
   margin-left: 0.1em;
-  font-size: 5em;
-  /* font-size: 5vw; */
-  font-family: 'Oleo Script', cursive;
-  text-shadow: -2px 1px #26282b;
+  font-family: Nunito;
+  font-weight: 900;
+  font-size: 48px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 500px) {
   .brand-name {
     font-size: 1em;
   }
+}
+
+#square {
+  width: 100%;
+  background: #1F2041;
+  z-index: -1;
+  position: absolute;
 }
 
 #circle {
@@ -209,7 +224,7 @@ header h3 {
   min-width: 100px;
   width: 50%;
   height: 44px;
-  background: #FFFFFF;
+  background: #FFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
@@ -247,7 +262,7 @@ header h3 {
   width: 100%;
   left: -1px;
   top: 42px;
-  background: #FFFFFF;
+  background: #FFF;
   border: 1px solid rgba(31, 32, 65, 0.5);
   /* border-top-width: 0; */
   border-radius: 0 0 4px 4px;
@@ -305,13 +320,14 @@ header h3 {
 .card {
   width: 280px;
 
-  background: #FFFFFF;
+  background: #FFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   padding: 30px 40px 40px 40px;
   min-height: 245px;
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 .card-header-group {
@@ -327,6 +343,13 @@ header h3 {
 .card-description {
   margin: 20px 0;
   flex-grow: 1;
+}
+
+@media only screen and (max-width: 420px) {
+  .card {
+    padding: 20px 30px 30px 30px;
+    margin: 20px 0;
+  }
 }
 
 /* #endregion */

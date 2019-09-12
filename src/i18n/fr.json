@@ -1,3 +1,16 @@
 {
-  "HELLO_WORLD": "Bonjour monde"
+  "URL": "https://restaxi-web.web.app",
+  "TITLE_TAG": "Titulo",
+  "DESCRIPTION_TAG": "Meta descrição",
+  "MAIN_HEADER": "Taxis terrestres em Olhão",
+  "MAIN_HEADER_DESCRIPTION": " granda descriptiongranda descriptiongranda descriptiongranda descriptiongranda descriptiongranda descriptiongranda description",
+  "CTA_CALL": "Telefonar ao taxista",
+  "CTA_CONTACTS": "Ver Contactos",
+  "CONTACTS_HEADER": "Contatos",
+  "CONTACTS_HEADER_DESCRIPTION": "Contatos deciptionee",
+  "PHONE_HEADER": "Telemovel",
+  "PHONE_DESCRIPTION": "Forma mais rapida de comunicar com um taxista, a qualquer altura do dia",
+  "EMAIL_HEADER": "Email",
+  "EMAIL_DESCRIPTION": "Quer marcar um taxi?<br>Quer tirar alguma duvida?<br>Envie nos um email, nos respondemos o mais rapido possivel.",
+  "EMAIL_SEND": "Enviar email"
 }

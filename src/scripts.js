@@ -84,6 +84,9 @@ function calcCircles() {
   circle.marginLeft = -w * 1.5 + 'px';
   circle.marginTop = -w + h * 0.9 + 'px';
 
+  const square = document.getElementById('square').style;
+  square.height = h * 0.9 - w / 2 + 'px';
+
   document.getElementsByTagName('header')[0].style.height = h * 0.9 + 'px';
 }
 
