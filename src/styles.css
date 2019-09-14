@@ -164,30 +164,48 @@ header h3 {
 /**** Brand ****/
 
 .brand-line {
-  margin: 20px;
-  display:flex;
+  margin: 3% 10%;
+  display: flex;
   align-items: center;
 }
 
 .brand-logo {
-  margin-left: 5%;
-  width: 4em;
-  height: 4em;
+  width: calc(1.3em + 2.6vw);
+  height: calc(1.3em + 2.6vw);
 }
 
 .brand-name {
-  margin-left: 0.1em;
+  margin-left: 1%;
   font-family: Nunito;
   font-weight: 900;
-  font-size: 48px;
-  color: #FFFFFF;
+  font-size: calc(1em + 2vw);
+  color: #FFF;
+  flex-grow: 1;
+}
+
+@media (max-width: 1000px) {
+  .brand-line {
+    margin: 3% 5%;
+  }
 }
 
 @media (max-width: 500px) {
-  .brand-name {
-    font-size: 1em;
+  .brand-line {
+    margin: 5% 3%;
   }
 }
+
+/*@media (max-width: 900px) {
+  .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  .brand-name {
+    font-size: 36px;
+  }
+} */
+
 
 #square {
   width: 100%;
@@ -203,33 +221,15 @@ header h3 {
   position: absolute;
 }
 
-/**** Languages ****/
-
-.lang-a,
-.lang-a:active,
-.lang-a:hover {
-  color: #000;
-  text-decoration: none;
-}
-
-.selected-lang-a {
-  cursor: default;
-  font-weight: bold;
-}
-
 /* #region dropdown */
 
 #dropdown {
-  max-width: 320px;
-  min-width: 100px;
-  width: 50%;
+  width: 320px;
   height: 44px;
   background: #FFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 4px;
-  margin-left: auto;
-  margin-right: 50px;
   display: flex;
   position: relative;
   cursor: pointer;
@@ -248,7 +248,7 @@ header h3 {
 #dropdown svg {
   width: 13px;
   height: 8px;
-  margin: 18px;
+  margin: 17px;
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -266,13 +266,12 @@ header h3 {
   border: 1px solid rgba(31, 32, 65, 0.5);
   /* border-top-width: 0; */
   border-radius: 0 0 4px 4px;
-  display: flex;
   flex-direction: column;
-  opacity: 0;
+  display: none;
 }
 
 #dropdown.open #dropdown-list {
-  opacity: 1;
+  display: flex;
 }
 
 #dropdown-list a {
@@ -289,9 +288,16 @@ header h3 {
   color: white;
 }
 
+@media (max-width: 1000px) {
+  #dropdown {
+    width: 230px;
+  }
+}
+
 @media (max-width: 700px) {
   #dropdown {
     height: 32px;
+    width: 100px;
   }
 
   #dropdown label {
@@ -303,7 +309,11 @@ header h3 {
   #dropdown svg {
     width: 13px;
     height: 8px;
-    margin: 12px;
+    margin: 11px 11px 11px 0;
+  }
+
+  #dropdown-list {
+    top: 30px;
   }
 }
 

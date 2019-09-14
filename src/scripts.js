@@ -4,12 +4,16 @@ let language;
 let isDropdownOpen = false;
 
 function init() {
+
+  // setup circle style
+  calcCircles();
+  window.onresize = calcCircles;
+
   detectLanguage();
 
   // setup language links, maybe it should be in the html
   const languageElement = document.getElementById(language + '-a');
-  languageElement.classList.add('selected-lang-a');
-  languageElement.href = 'javascript:;';
+  languageElement.remove();
 
   // setup language on the html tag, maybe it should be in the html
   const htmlElement = document.getElementsByTagName('html')[0];
@@ -28,10 +32,6 @@ function init() {
       openCloseDropdown();
     }
   });
-
-  // setup circle style
-  calcCircles();
-  window.onresize = calcCircles;
 }
 
 function detectLanguage() {
