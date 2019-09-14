@@ -427,9 +427,29 @@ header {
 
 /*********** Footer ***********/
 
-.socialmedia-svg {
-  fill: darkblue;
-  width: 10em;
+footer {
+  height: 70px;
+  background: #FFF;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  padding: 0 140px;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  flex-grow: 1;
+}
+
+@media (max-width: 800px) {
+  footer {
+    padding: 0 70px;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    padding: 0 35px;
+  }
 }
 
 /*********** SVG ***********/
@@ -441,6 +461,11 @@ header {
 .icon-20-18 {
   width: 20px;
   height: 18px;
+}
+
+.icon-22 {
+  width: 22px;
+  height: 22px;
 }
 
 .icon-64-48 {
