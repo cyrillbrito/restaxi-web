@@ -27,12 +27,10 @@ h1 {
 
 h2 {
   font-family: Quicksand;
-  font-style: normal;
   font-weight: normal;
   font-size: 32px;
-  line-height: 40px;
-
   text-align: center;
+  margin: 20px 0 10px 0;
 }
 
 h3 {
@@ -122,6 +120,43 @@ button svg {
 
 .full-width {
   width: 100%;
+}
+
+/* #endregion */
+
+/* #region SPACER */
+
+.spacer {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media (max-width: 1200px) {
+  .spacer {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .spacer {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+}
+
+@media (max-width: 600px) {
+  .spacer {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+@media (max-width: 400px) {
+  .spacer {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
 
 /* #endregion */
@@ -356,7 +391,7 @@ header {
   min-height: 245px;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 20px 10px;
 }
 
 .card-header {
@@ -395,31 +430,26 @@ header {
   height: 1em;
 }
 
+
+/* #endregion */
+
 /* #region FOOTER */
 
 footer {
   height: 70px;
   background: #FFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  padding: 0 140px;
+  margin-top: 30px;
   display: flex;
   align-items: center;
 }
 
+footer .spacing {
+  margin-left: 20px
+}
+
 p {
   flex-grow: 1;
-}
-
-@media (max-width: 800px) {
-  footer {
-    padding: 0 70px;
-  }
-}
-
-@media (max-width: 600px) {
-  footer {
-    padding: 0 35px;
-  }
 }
 
 /* #endregion */
