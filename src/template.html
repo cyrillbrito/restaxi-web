@@ -15,14 +15,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<%=__('DESCRIPTION_TAG')%>">
+  <meta name="theme-color" content="#1F2041">
+
+  <title><%=__('TITLE_TAG')%></title>
 
   <link rel="alternate" href="<%=__('URL')%>" hreflang="pt">
   <link rel="alternate" href="<%=__('URL')%>/fr" hreflang="fr">
   <link rel="alternate" href="<%=__('URL')%>/en" hreflang="en">
 
-  <title><%=__('TITLE_TAG')%></title>
+  <link rel="manifest" href="manifest.json">
 
-  <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Nunito:900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand|Nunito:900&display=swap" media="none" onload="if(media!='all')media='all'">
 
 </head>
 
@@ -269,12 +272,12 @@
 
     <footer class="spacer">
       <p><%=__('COPYRIGHT')%></p>
-      <a title="Facebook" href="https://www.facebook.com/T%C3%A1xis-Restaura%C3%A7%C3%A3o-1930601007261807" target="_blank" rel="noopener" class="icon-22">
+      <a aria-label="Facebook" href="https://www.facebook.com/T%C3%A1xis-Restaura%C3%A7%C3%A3o-1930601007261807" target="_blank" rel="noopener" class="icon-22">
         <svg class="icon-22">
           <use xlink:href="#facebook">
         </svg>
       </a>
-      <a title="Instagram" href="https://www.instagram.com/taxisrestauracao" target="_blank" rel="noopener" class="icon-22 spacing">
+      <a aria-label="Instagram" href="https://www.instagram.com/taxisrestauracao" target="_blank" rel="noopener" class="icon-22 spacing">
         <svg class="icon-22">
           <use xlink:href="#instagram">
         </svg>
@@ -339,10 +342,6 @@
 
       </defs>
     </svg>
-
-
-
-
 
 </body>
 

@@ -32,6 +32,8 @@ function init() {
       openCloseDropdown();
     }
   });
+
+  setupServiceWorker();
 }
 
 function detectLanguage() {
@@ -89,6 +91,15 @@ function calcCircles() {
 
   document.getElementsByTagName('header')[0].style.height = h * 0.9 + 'px';
 }
+
+function setupServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(() => {
+      console.log('Service Worker Registered');
+    });
+  }
+}
+
 
 // main
 init();

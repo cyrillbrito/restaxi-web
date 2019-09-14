@@ -1,0 +1,15 @@
+{
+  "name": "Táxis Restauração",
+  "short_name": "Táxis",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "type": "image/ico",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#1F2041",
+  "theme_color": "#1F2041"
+}
