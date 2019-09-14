@@ -1,4 +1,4 @@
-/*********** Global ***********/
+/* #region PAGE */
 
 html {
   overflow-x: hidden;
@@ -12,33 +12,9 @@ body {
   position: relative
 }
 
-.fx {
-  display: flex;
-}
+/* #endregion */
 
-.fx.evenly {
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.fx.center {
-  justify-content: center;
-}
-
-.fx-right {
-  margin-left: auto;
-  order: 99;
-}
-
-.box {
-  width: 20rem;
-  min-height: 25rem;
-  border: 0.2em solid gray;
-}
-
-.hide {
-  visibility: hidden;
-}
+/* #region FONTS */
 
 h1 {
   font-family: Quicksand;
@@ -106,6 +82,10 @@ a {
   text-decoration: none;
 }
 
+/* #endregion */
+
+/* #region BUTTONS */
+
 button {
   height: 44px;
 
@@ -144,14 +124,14 @@ button svg {
   width: 100%;
 }
 
+/* #endregion */
 
-/*********** Header ***********/
+/* #region HEADER */
 
 header {
   display: flex;
   flex-direction: column;
 }
-
 
 .header-content {
   margin-left: 14%;
@@ -191,7 +171,23 @@ header {
   }
 }
 
-/**** Brand ****/
+#square {
+  width: 100%;
+  background: #1F2041;
+  z-index: -1;
+  position: absolute;
+}
+
+#circle {
+  border-radius: 100%;
+  background: #1F2041;
+  z-index: -1;
+  position: absolute;
+}
+
+/* #endregion */
+
+/* #region BRAND LINE */
 
 .brand-line {
   margin: 2% 10%;
@@ -237,21 +233,9 @@ header {
   }
 }
 
-#square {
-  width: 100%;
-  background: #1F2041;
-  z-index: -1;
-  position: absolute;
-}
+/* #endregion */
 
-#circle {
-  border-radius: 100%;
-  background: #1F2041;
-  z-index: -1;
-  position: absolute;
-}
-
-/* #region dropdown */
+/* #region DROPDOWN */
 
 #dropdown {
   width: 320px;
@@ -355,8 +339,7 @@ header {
 
 /* #endregion */
 
-
-/* #region card */
+/* #region CARDS */
 
 .card-container {
   display: flex;
@@ -366,7 +349,6 @@ header {
 
 .card {
   width: 280px;
-
   background: #FFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
@@ -375,6 +357,10 @@ header {
   display: flex;
   flex-direction: column;
   margin: 20px;
+}
+
+.card-header {
+  display: flex;
 }
 
 .card-header-group {
@@ -401,23 +387,7 @@ header {
 
 /* #endregion */
 
-
-
-
-
-/*********** Contats ***********/
-
-
-
-
-
-
-.contacts-svg {
-  fill: darkslategray;
-  width: 10em;
-}
-
-/*********** Social Proof ***********/
+/* #region SOCIAL PROOF */
 
 .sp-star {
   fill: gold;
@@ -425,7 +395,7 @@ header {
   height: 1em;
 }
 
-/*********** Footer ***********/
+/* #region FOOTER */
 
 footer {
   height: 70px;
@@ -452,7 +422,10 @@ p {
   }
 }
 
-/*********** SVG ***********/
+/* #endregion */
+
+/* #region SVG */
+
 .icon-18 {
   width: 18px;
   height: 18px;
@@ -472,3 +445,5 @@ p {
   width: 64px;
   height: 48px;
 }
+
+/* #endregion */
