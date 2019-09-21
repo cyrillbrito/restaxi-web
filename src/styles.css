@@ -202,6 +202,7 @@ header {
 @media (max-width: 600px) {
   .header-content {
     margin-left: 8%;
+    margin-right: 8%;
     max-width: 100%;
   }
 }
