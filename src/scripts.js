@@ -55,8 +55,9 @@ function initCallToAction() {
     buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#phone_in_talk"></svg><label>' + __('CTA_CALL') + '</label>';
   } else {
     anchorElement.href = __('URL') + '#contacts';
-    // buttonElement.classList.add('desktop');
     buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#arrow_downward"></svg><label>' + __('CTA_CONTACTS') + '</label>';
+    const callElement = document.getElementById('call-a');
+    callElement.remove();
   }
 }
 

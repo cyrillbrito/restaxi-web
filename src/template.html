@@ -106,18 +106,20 @@
             </svg>
             <div class="card-header-group">
               <h4><%=__('PHONE_HEADER')%></h4>
-              <h5>+351 912 227 77</h5>
+              <h5>+351 964 468 494</h5>
             </div>
           </div>
           <div class="card-description">
             <p><%=__('PHONE_DESCRIPTION')%></p>
           </div>
-          <button class="full-width">
-            <svg class="icon-18">
-              <use xlink:href="#phone_in_talk">
-            </svg>
-            <label><%=__('CTA_CALL')%></label>
-          </button>
+          <a id="call-a" href='tel:+351964468494'>
+            <button class="full-width">
+              <svg class="icon-18">
+                <use xlink:href="#phone_in_talk">
+              </svg>
+              <label><%=__('CTA_CALL')%></label>
+            </button>
+          </a>
         </div>
 
         <div class="card">
@@ -125,20 +127,22 @@
             <svg class="icon-64-48">
               <use xlink:href="#contact_mail">
             </svg>
-            <div class="card-header-group">
-              <h4><%=__('EMAIL_HEADER')%></h4>
-              <h5>test@taxisrestauracao.pt</h5>
+            <div class="card-header-group" style="margin-left: 2px">
+              <h4 style="margin-left: 20px"><%=__('EMAIL_HEADER')%></h4>
+              <h5>suporte@taxisrestauracao.pt</h5>
             </div>
           </div>
           <div class="card-description">
             <p><%=__('EMAIL_DESCRIPTION')%></p>
           </div>
-          <button class="full-width">
-            <svg class="icon-20-18">
-              <use xlink:href="#email">
-            </svg>
-            <label><%=__('EMAIL_SEND')%></label>
-          </button>
+          <a href="mailto:suporte@taxisrestauracao.pt">
+            <button class="full-width">
+              <svg class="icon-20-18">
+                <use xlink:href="#email">
+              </svg>
+              <label><%=__('EMAIL_SEND')%></label>
+            </button>
+          </a>
         </div>
 
       </div>

@@ -29,7 +29,15 @@ module.exports = Object.keys(languages).map(language => ({
   plugins: [
     new HtmlWebpackPlugin({
       template: 'src/template.html',
-      inlineSource: '.(js|css)$' // embed all javascript and css inline
+      inlineSource: '.(js|css)$', // embed all javascript and css inline
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
     }),
     new HtmlWebpackInlineSourcePlugin(),
     new I18nPlugin(languages[language])
