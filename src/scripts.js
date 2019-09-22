@@ -54,7 +54,7 @@ function initCallToAction() {
     anchorElement.href = 'tel:+351964468494';
     buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#phone_in_talk"></svg><label>' + __('CTA_CALL') + '</label>';
   } else {
-    anchorElement.href = __('URL') + '#contacts';
+    anchorElement.href = '#contacts';
     buttonElement.innerHTML = '<svg class="icon-18"><use xlink:href="#arrow_downward"></svg><label>' + __('CTA_CONTACTS') + '</label>';
     const callElement = document.getElementById('call-a');
     callElement.remove();

@@ -47,6 +47,8 @@ https://webhint.io/scanner/63ce159c-57aa-427e-bb2d-4fe904d81a25
 
 Google PageSpeed
 
+https://neilpatel.com/
+
 ## SEO 
 
 1. Description meta
