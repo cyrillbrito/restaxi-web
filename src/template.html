@@ -3,16 +3,6 @@
 
 <head>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y7LZKX269R"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-Y7LZKX269R');
-  </script>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<%=__('DESCRIPTION_TAG')%>">
@@ -338,6 +328,29 @@
 
       </defs>
     </svg>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+
+    <!-- SDKs for Firebase products -->
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-analytics.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyB3zvonLS17hVTF2AVtqBe3cptpaNrQ0xM",
+        authDomain: "restaxi-web.firebaseapp.com",
+        databaseURL: "https://restaxi-web.firebaseio.com",
+        projectId: "restaxi-web",
+        storageBucket: "",
+        messagingSenderId: "553280592062",
+        appId: "1:553280592062:web:e5d2460538c40264d326ef",
+        measurementId: "G-FJN6R7G8SZ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
 </body>
 
