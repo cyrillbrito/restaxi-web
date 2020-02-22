@@ -385,7 +385,7 @@ header {
 
 .card-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -428,6 +428,17 @@ header {
 }
 
 /* #endregion */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-container .right {
+  align-self: flex-end; 
+}
+
+
 
 /* #region SOCIAL PROOF */
 
