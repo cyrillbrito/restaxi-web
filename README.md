@@ -5,7 +5,7 @@
 
 This repo is  the source code for the [taxisrestauracao.pt](https://taxisrestauracao.pt) webpage.
 
-The website is just a simple page with the contact information for the Táxi driver.
+The website is just a simple page with the contact information for the Taxi driver.
 
 ## Features
 
@@ -18,7 +18,7 @@ The website is just a simple page with the contact information for the Táxi dri
 </p>
 
 
-## Running the procject
+## Running the project
 
 To start up the project in development mode just run ```npm start```. This will run webpack in watch mode. The files will be generated and saved in the ```dist``` folder.
 
@@ -27,9 +27,9 @@ To building for prod run ```npm run build```. This will generate the minified fi
 
 ## Multi-Languages
 
-I was able to have only one template and than using webpack generate a file for each language with the correct labels. This makes developing easiar beacause I don't have to maintain 3 equal files.
+I was able to have only one template and than using webpack generate a file for each language with the correct labels. This makes developing easier beacause I don't have to maintain 3 equal files.
 
-By default the website will load the portuguese version of the site, if the user wants to switch the languge he has to do it manually.
+By default the website will load the Portuguese version of the site, if the user wants to switch the language he has to do it manually.
 
 
 ## Icons
