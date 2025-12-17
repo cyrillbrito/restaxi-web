@@ -1,41 +1,51 @@
+# Táxis Restauração
 
-<img src="src/assets/favicon.ico" align="right">
+> Family-owned taxi service in Olhão, Algarve since 2000
 
-# restaxi-web
+[![Cloudflare Pages](https://img.shields.io/badge/Deployed%20on-Cloudflare%20Pages-F38020?logo=cloudflare&logoColor=white)](https://taxisrestauracao.pt)
+[![Built with Astro](https://img.shields.io/badge/Built%20with-Astro-BC52EE?logo=astro&logoColor=white)](https://astro.build)
 
-This repo is  the source code for the [taxisrestauracao.pt](https://taxisrestauracao.pt) webpage.
+## About
 
-The website is just a simple page with the contact information for the Taxi driver.
+Static multilingual website for **Táxis Restauração** - a 24/7 taxi service covering Olhão, Faro Airport, Tavira, Fuseta, Ria Formosa and all of the Algarve region.
 
-## Features
+**Languages:** Portuguese, French, English
 
-* No external libraries (making it super light)
-* Inline js and css (the hole website is in the .html)
-* Multi-Languages (PT, EN and FR)
+## Tech Stack
 
-<p align="center">
-  <img width="640"  src="src/assets/website.gif">
-</p>
+- **Framework:** [Astro](https://astro.build) (100% static output)
+- **Hosting:** [Cloudflare Pages](https://pages.cloudflare.com)
+- **Package Manager:** pnpm
 
+## Commands
 
-## Running the project
+```bash
+pnpm install      # Install dependencies
+pnpm dev          # Start dev server → localhost:4321
+pnpm build        # Build static site → ./dist/
+pnpm preview      # Preview build locally
+pnpm deploy       # Deploy to Cloudflare Pages
+```
 
-To start up the project in development mode just run ```npm start```. This will run webpack in watch mode. The files will be generated and saved in the ```dist``` folder.
+## Auto Deploy
 
-To building for prod run ```npm run build```. This will generate the minified files and save them to ```dist```.
+Build and ship in one go:
 
+```bash
+pnpm build && pnpm deploy
+```
 
-## Multi-Languages
+## Project Structure
 
-I was able to have only one template and than using webpack generate a file for each language with the correct labels. This makes developing easier beacause I don't have to maintain 3 equal files.
+```
+src/
+├── components/     # Astro components
+├── i18n/           # Translations (pt, fr, en)
+├── layouts/        # Page layouts
+└── pages/          # Routes (/, /en/, /fr/)
+public/             # Static assets
+```
 
-By default the website will load the Portuguese version of the site, if the user wants to switch the language he has to do it manually.
+## License
 
-
-## Icons
-
-[Free SVG icons for popular brands](https://github.com/simple-icons/simple-icons)
-
-https://github.com/leungwensen/svg-icon
-using metro ui css
-
+All rights reserved - Táxis Restauração

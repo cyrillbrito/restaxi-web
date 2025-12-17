@@ -1,0 +1,154 @@
+---
+import type { Locale } from '../i18n/translations';
+import { getTranslations } from '../i18n/utils';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+
+const currentUrl = locale === 'pt' ? t.URL : `${t.URL}/${locale}`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "TaxiService",
+  "name": "Táxis Restauração",
+  "description": t.DESCRIPTION_TAG,
+  "url": t.URL,
+  "telephone": "+351964468494",
+  "email": "taxisrestauracao@gmail.com",
+  "foundingDate": "2000",
+  "areaServed": {
+    "@type": "City",
+    "name": "Olhão",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Algarve, Portugal"
+    }
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Olhão",
+    "addressRegion": "Algarve",
+    "addressCountry": "PT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "37.0256",
+    "longitude": "-7.8411"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "priceRange": "$$",
+  "image": `${t.URL}/favicon.ico`,
+  "sameAs": []
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={t.DESCRIPTION_TAG} />
+    <meta name="theme-color" content="#1F2041" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- Canonical & Language Alternates -->
+    <link rel="canonical" href={currentUrl} />
+    <link rel="alternate" href={t.URL} hreflang="pt" />
+    <link rel="alternate" href={`${t.URL}/fr`} hreflang="fr" />
+    <link rel="alternate" href={`${t.URL}/en`} hreflang="en" />
+    <link rel="alternate" href={t.URL} hreflang="x-default" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={currentUrl} />
+    <meta property="og:title" content={t.TITLE_TAG} />
+    <meta property="og:description" content={t.DESCRIPTION_TAG} />
+    <meta property="og:image" content={`${t.URL}/favicon.ico`} />
+    <meta property="og:locale" content={locale === 'pt' ? 'pt_PT' : locale === 'fr' ? 'fr_FR' : 'en_GB'} />
+    <meta property="og:site_name" content="Táxis Restauração" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={t.TITLE_TAG} />
+    <meta name="twitter:description" content={t.DESCRIPTION_TAG} />
+
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Táxis Restauração" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta name="generator" content={Astro.generator} />
+    <title>{t.TITLE_TAG}</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --color-primary: #1f2041;
+    --color-primary-light: #4b3f72;
+    --color-accent: #ffd93d;
+    --color-accent-dark: #f6b93b;
+    --color-success: #6fcf97;
+    --color-text: #333;
+    --color-text-light: #666;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f8f9fa;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-bg);
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: inherit;
+  }
+</style>

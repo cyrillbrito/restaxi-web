@@ -1,30 +1,16 @@
 {
-  "name": "restaxi-web",
-  "version": "1.0.0",
-  "description": "",
-  "private": true,
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "start": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "wrangler pages deploy dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cyrillbrito/restaxi-web.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cyrillbrito/restaxi-web/issues"
-  },
-  "homepage": "https://github.com/cyrillbrito/restaxi-web#readme",
-  "devDependencies": {
-    "css-loader": "^3.4.2",
-    "html-webpack-inline-source-plugin": "^0.0.10",
-    "html-webpack-plugin": "^3.2.0",
-    "i18n-webpack-plugin": "^1.0.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+  "dependencies": {
+    "astro": "^5.16.6",
+    "wrangler": "^4.55.0"
   }
 }

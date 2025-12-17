@@ -1,0 +1,681 @@
+---
+import type { Locale } from '../i18n/translations';
+import { getTranslations } from '../i18n/utils';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+---
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="container nav-content">
+    <a href="/" class="logo">
+      <img src="/favicon.ico" alt={t.LOGO_ALT} width="40" height="40" />
+      <span>Táxis Restauração</span>
+    </a>
+    <div class="nav-right">
+      <a href="#services" class="nav-link hide-mobile">{t.SERVICES_HEADER}</a>
+      <a href="#about" class="nav-link hide-mobile">{t.ABOUT_HEADER}</a>
+      <a href="#contacts" class="nav-link hide-mobile">{t.CONTACTS_HEADER}</a>
+      <LanguageSwitcher currentLocale={locale} />
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <span class="badge">{t.HERO_BADGE}</span>
+    <h1>{t.MAIN_HEADER}</h1>
+    <p class="hero-description">{t.MAIN_HEADER_DESCRIPTION}</p>
+    <div class="hero-cta">
+      <a href="tel:+351964468494" class="btn btn-primary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        {t.CTA_CALL}
+      </a>
+      <a href="https://wa.me/351964468494" target="_blank" rel="noopener" class="btn btn-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        {t.CTA_WHATSAPP}
+      </a>
+    </div>
+    <div class="hero-phone">
+      <span>+351 964 468 494</span>
+    </div>
+  </div>
+  <div class="hero-decoration">
+    <svg viewBox="0 0 1440 120" fill="none" preserveAspectRatio="none">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+    </svg>
+  </div>
+</header>
+
+<!-- Services Section -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>{t.SERVICES_HEADER}</h2>
+      <p>{t.SERVICES_SUBTITLE}</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <h3>{t.SERVICE_1_TITLE}</h3>
+        <p>{t.SERVICE_1_DESC}</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+          </svg>
+        </div>
+        <h3>{t.SERVICE_2_TITLE}</h3>
+        <p>{t.SERVICE_2_DESC}</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+        </div>
+        <h3>{t.SERVICE_3_TITLE}</h3>
+        <p>{t.SERVICE_3_DESC}</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <h3>{t.SERVICE_4_TITLE}</h3>
+        <p>{t.SERVICE_4_DESC}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Us Section -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>{t.WHY_US_HEADER}</h2>
+      <p>{t.WHY_US_SUBTITLE}</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-number">20+</div>
+        <h4>{t.WHY_1_TITLE}</h4>
+        <p>{t.WHY_1_DESC}</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h4>{t.WHY_2_TITLE}</h4>
+        <p>{t.WHY_2_DESC}</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"></line>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+        </div>
+        <h4>{t.WHY_3_TITLE}</h4>
+        <p>{t.WHY_3_DESC}</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">24/7</div>
+        <h4>{t.WHY_4_TITLE}</h4>
+        <p>{t.WHY_4_DESC}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <h2>{t.ABOUT_HEADER}</h2>
+        <p>{t.ABOUT_TEXT_1}</p>
+        <p>{t.ABOUT_TEXT_2}</p>
+        <p>{t.ABOUT_TEXT_3}</p>
+      </div>
+      <div class="about-image">
+        <div class="about-image-placeholder">
+          <img src="/favicon.svg" alt={t.LOGO_ALT} width="160" height="160" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contacts" class="section section-dark">
+  <div class="container">
+    <div class="section-header light">
+      <h2>{t.CONTACTS_HEADER}</h2>
+      <p>{t.CONTACTS_SUBTITLE}</p>
+    </div>
+    <div class="contact-grid">
+      <a href="tel:+351964468494" class="contact-card">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+        </div>
+        <h3>{t.PHONE_HEADER}</h3>
+        <p class="contact-value">+351 964 468 494</p>
+        <p class="contact-desc">{t.PHONE_DESCRIPTION}</p>
+      </a>
+      <a href="mailto:taxisrestauracao@gmail.com" class="contact-card">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+        </div>
+        <h3>{t.EMAIL_HEADER}</h3>
+        <p class="contact-value">taxisrestauracao@gmail.com</p>
+        <p class="contact-desc">{t.EMAIL_DESCRIPTION}</p>
+      </a>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <h3>{t.ADDRESS_HEADER}</h3>
+        <p class="contact-value">{t.ADDRESS_DESC}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-brand">
+      <strong>Táxis Restauração</strong>
+      <span class="footer-divider">|</span>
+      <span>{t.FOOTER_TAGLINE}</span>
+    </div>
+    <p class="footer-copyright">{t.COPYRIGHT}</p>
+  </div>
+</footer>
+
+<style>
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1.5rem;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+  }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+  }
+
+  .nav-link:hover {
+    color: var(--color-primary);
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .hide-mobile {
+      display: block;
+    }
+  }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0 4rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  }
+
+  .hero-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+  }
+
+  .badge {
+    display: inline-block;
+    background: rgba(255, 217, 61, 0.2);
+    color: var(--color-accent);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 217, 61, 0.3);
+  }
+
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+    line-height: 1.1;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+    line-height: 1.7;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background: var(--color-accent);
+    color: var(--color-primary);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 217, 61, 0.3);
+  }
+
+  .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  .hero-phone {
+    font-size: 1.5rem;
+    font-weight: 700;
+    opacity: 0.9;
+  }
+
+  .hero-decoration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+  }
+
+  .hero-decoration svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Sections */
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-alt {
+    background: var(--color-bg-alt);
+  }
+
+  .section-dark {
+    background: var(--color-primary);
+    color: white;
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+
+  .section-header h2 {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    color: var(--color-primary);
+    margin: 0 0 0.75rem;
+  }
+
+  .section-header.light h2 {
+    color: white;
+  }
+
+  .section-header p {
+    color: var(--color-text-light);
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .section-header.light p {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Services */
+  .services-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .service-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  }
+
+  .service-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--color-primary);
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    margin: 0 0 0.75rem;
+    color: var(--color-primary);
+  }
+
+  .service-card p {
+    margin: 0;
+    color: var(--color-text-light);
+    line-height: 1.6;
+  }
+
+  /* Features */
+  .features-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .feature {
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .feature-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-icon svg {
+    color: var(--color-accent);
+  }
+
+  .feature h4 {
+    font-size: 1.25rem;
+    margin: 0.75rem 0 0.5rem;
+    color: var(--color-primary);
+  }
+
+  .feature p {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+  }
+
+  /* About */
+  .about-content {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .about-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .about-text h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin: 0 0 1.5rem;
+  }
+
+  .about-text p {
+    color: var(--color-text-light);
+    margin: 0 0 1rem;
+    line-height: 1.8;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-image-placeholder {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, var(--color-bg-alt) 0%, #e9ecef 100%);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Contact */
+  .contact-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .contact-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+    display: block;
+  }
+
+  .contact-card:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+  }
+
+  .contact-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--color-accent);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    color: var(--color-primary);
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .contact-value {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+  }
+
+  .contact-desc {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+    background: #161629;
+    color: white;
+    padding: 3rem 0 2rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer-brand strong {
+    font-size: 1.1rem;
+  }
+
+  .footer-brand span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  .footer-divider {
+    opacity: 0.4;
+  }
+
+  .footer-copyright {
+    font-size: 0.875rem;
+    opacity: 0.6;
+    margin: 0;
+  }
+</style>
