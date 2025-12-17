@@ -68,10 +68,8 @@ export const translations = {
     EMAIL_HEADER: 'Email',
     EMAIL_DESCRIPTION:
       'Para reservas antecipadas ou questões, envie-nos um email. Respondemos rapidamente.',
-    EMAIL_SEND: 'Enviar Email',
     ADDRESS_HEADER: 'Localização',
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
-    ADDRESS_COVERAGE: 'Cobertura: Olhão, Faro, Tavira, Fuseta, Ria Formosa e todo o Algarve',
 
     // Footer
     COPYRIGHT: '© 2025 Táxis Restauração. Todos os direitos reservados.',
@@ -81,7 +79,7 @@ export const translations = {
     URL: 'https://taxisrestauracao.pt',
     TITLE_TAG: 'Taxis à Olhão - Service de Taxi 24h | Táxis Restauração',
     DESCRIPTION_TAG:
-      "Service de taxi professionnel à Olhão et en Algarve depuis 2000. Transferts aéroport Faro, excursions touristiques, taxi 24h. Appelez +351 964 468 494.",
+      'Service de taxi professionnel à Olhão et en Algarve depuis 2000. Transferts aéroport Faro, excursions touristiques, taxi 24h. Appelez +351 964 468 494.',
     LOGO_ALT: 'Logo Táxis Restauração - Service de Taxi à Olhão',
     THIS_LANGUAGE: 'Français',
 
@@ -97,7 +95,7 @@ export const translations = {
     SERVICES_HEADER: 'Nos Services',
     SERVICES_SUBTITLE: 'Solutions de transport pour tous vos besoins',
 
-    SERVICE_1_TITLE: "Transfert Aéroport",
+    SERVICE_1_TITLE: 'Transfert Aéroport',
     SERVICE_1_DESC:
       "Transferts rapides et confortables depuis et vers l'aéroport de Faro. Suivi des vols et attente gratuite inclus.",
 
@@ -146,10 +144,8 @@ export const translations = {
     EMAIL_HEADER: 'Email',
     EMAIL_DESCRIPTION:
       'Pour réservations ou questions, envoyez-nous un email. Nous répondons rapidement.',
-    EMAIL_SEND: 'Envoyer Email',
     ADDRESS_HEADER: 'Localisation',
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
-    ADDRESS_COVERAGE: 'Couverture: Olhão, Faro, Tavira, Fuseta, Ria Formosa et tout l\'Algarve',
 
     // Footer
     COPYRIGHT: '© 2025 Táxis Restauração. Tous droits réservés.',
@@ -222,12 +218,9 @@ export const translations = {
     PHONE_HEADER: 'Phone',
     PHONE_DESCRIPTION: 'Call us anytime. We are available 24 hours a day.',
     EMAIL_HEADER: 'Email',
-    EMAIL_DESCRIPTION:
-      'For advance bookings or questions, send us an email. We respond quickly.',
-    EMAIL_SEND: 'Send Email',
+    EMAIL_DESCRIPTION: 'For advance bookings or questions, send us an email. We respond quickly.',
     ADDRESS_HEADER: 'Location',
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
-    ADDRESS_COVERAGE: 'Coverage: Olhão, Faro, Tavira, Fuseta, Ria Formosa and all Algarve',
 
     // Footer
     COPYRIGHT: '© 2025 Táxis Restauração. All rights reserved.',

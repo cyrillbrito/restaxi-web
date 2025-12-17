@@ -12,42 +12,42 @@ const t = getTranslations(locale);
 const currentUrl = locale === 'pt' ? t.URL : `${t.URL}/${locale}`;
 
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "TaxiService",
-  "name": "Táxis Restauração",
-  "description": t.DESCRIPTION_TAG,
-  "url": t.URL,
-  "telephone": "+351964468494",
-  "email": "taxisrestauracao@gmail.com",
-  "foundingDate": "2000",
-  "areaServed": {
-    "@type": "City",
-    "name": "Olhão",
-    "containedInPlace": {
-      "@type": "AdministrativeArea",
-      "name": "Algarve, Portugal"
-    }
+  '@context': 'https://schema.org',
+  '@type': 'TaxiService',
+  name: 'Táxis Restauração',
+  description: t.DESCRIPTION_TAG,
+  url: t.URL,
+  telephone: '+351964468494',
+  email: 'taxisrestauracao@gmail.com',
+  foundingDate: '2000',
+  areaServed: {
+    '@type': 'City',
+    name: 'Olhão',
+    containedInPlace: {
+      '@type': 'AdministrativeArea',
+      name: 'Algarve, Portugal',
+    },
   },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Olhão",
-    "addressRegion": "Algarve",
-    "addressCountry": "PT"
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Olhão',
+    addressRegion: 'Algarve',
+    addressCountry: 'PT',
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "37.0256",
-    "longitude": "-7.8411"
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '37.0256',
+    longitude: '-7.8411',
   },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "00:00",
-    "closes": "23:59"
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '00:00',
+    closes: '23:59',
   },
-  "priceRange": "$$",
-  "image": `${t.URL}/favicon.ico`,
-  "sameAs": []
+  priceRange: '$$',
+  image: `${t.URL}/favicon.ico`,
+  sameAs: [],
 };
 ---
 
@@ -75,7 +75,10 @@ const structuredData = {
     <meta property="og:title" content={t.TITLE_TAG} />
     <meta property="og:description" content={t.DESCRIPTION_TAG} />
     <meta property="og:image" content={`${t.URL}/favicon.ico`} />
-    <meta property="og:locale" content={locale === 'pt' ? 'pt_PT' : locale === 'fr' ? 'fr_FR' : 'en_GB'} />
+    <meta
+      property="og:locale"
+      content={locale === 'pt' ? 'pt_PT' : locale === 'fr' ? 'fr_FR' : 'en_GB'}
+    />
     <meta property="og:site_name" content="Táxis Restauração" />
 
     <!-- Twitter Card -->
@@ -87,9 +90,21 @@ const structuredData = {
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Táxis Restauração" />
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX1VQ3FMY1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-YX1VQ3FMY1');
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
