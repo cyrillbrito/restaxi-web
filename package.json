@@ -10,7 +10,7 @@
     "deploy": "wrangler pages deploy dist"
   },
   "dependencies": {
-    "astro": "^5.16.6"
+    "astro": "^6.1.6"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
