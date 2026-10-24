@@ -7,7 +7,7 @@
 
 ## About
 
-Static multilingual website for **Táxis Restauração** - a 24/7 taxi service covering Olhão, Faro Airport, Tavira, Fuseta and all of the Algarve region.
+Static multilingual website for **Táxis Restauração** - a family taxi in Olhão covering Olhão, Faro Airport, Tavira, Fuseta and all of the Algarve region.
 
 **Languages:** Portuguese, French, English
 

@@ -48,7 +48,8 @@ The listing is the main source of calls; most people call straight from Maps and
 To do:
 
 - Replace the photos (they show the Olhão market, not the taxi). Add 10+ real ones: car outside and inside, driver, airport pickup.
-- Fill in services (airport transfer, tours, 24h taxi, business), and the description in PT, mentioning FR and EN.
+- Fill in services (Faro airport, rides in Olhão, Algarve trips) and the description in PT, mentioning FR and EN.
+- Set the real opening hours. It is one taxi, driven by the owner, and the phone is off at night, so the listing must not say 24 hours.
 - Set the website link with UTM tags: `https://taxisrestauracao.pt/?utm_source=google&utm_medium=organic&utm_campaign=gbp`.
 - Add the WhatsApp chat link `https://wa.me/351964468494`.
 - Ask every customer for a review with the "Solicitar avaliações" link, sent on WhatsApp. Reply to all reviews.
@@ -80,6 +81,8 @@ Fixed in Oct 2026:
 - Schema was `TaxiService` (a Service, not a business). Now `LocalBusiness` with areas served.
 - Google Fonts replaced by self-hosted Inter (faster, no visitor IPs sent to Google).
 - Added a real 404 page (before, any URL returned the homepage with 200).
+
+Copy (Oct 2026): rewritten around the real search terms and kept short. Title "Táxi Olhão · 964 468 494", H1 "Táxi em Olhão", services for Faro airport, rides in Olhão and Algarve trips, and a 3-question FAQ (taxi number, airport time, booking ahead). It never promises 24 hours: one taxi, driven by the owner, no night service, so early or late trips are booked ahead. No unverified claims (flight monitoring, A/C, licensed drivers, executive service). Public email is `taxisrestauracao@hotmail.com`.
 
 Ideas, not done:
 
