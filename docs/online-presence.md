@@ -13,7 +13,7 @@ Account logins and recovery details are kept privately, not in this public repo.
 ## Accounts status (Oct 2026)
 
 - Google Business Profile: access recovered and verified ("Você gerencia este Perfil da Empresa").
-- Google Ads: an account is linked to the listing and has a disapproved ad. Needs a check: is billing attached, is anything running or spending, why was it rejected.
+- Google Ads: a Smart campaign, running since Mar 2020, managed from `cyrill.brito@gmail.com`. It mostly buys "taxi olhão" searches at about €0.36 a click. On 24 Oct 2026 the landing page was switched from the website to the Business Profile, which shows "Can't link ads to your Business Profile" until the Ads account's email manages the profile. Keyword themes "ilha de armona" and "táxi 24 horas" bring the wrong callers (boats, night). Boat words go in negative keyword themes, Ad schedule is 7:00–21:00 every day (Portugal time), a rough estimate for the ad only, not official hours, so don't publish it. Boat negatives added 24 Oct 2026.
 - Google Search Console: enabled in Oct 2026, no data yet. Data shows up after a few days.
 - Analytics: Cloudflare Web Analytics on the Pages project (PostHog was tried and dropped, see Analytics).
 

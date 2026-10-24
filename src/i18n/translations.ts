@@ -31,7 +31,7 @@ export const translations = {
 
     SERVICE_1_TITLE: 'Táxi para o Aeroporto de Faro',
     SERVICE_1_DESC:
-      'De Olhão para o Aeroporto de Faro e do aeroporto para Olhão. Cerca de 20 minutos. Para voos cedo ou tarde, reserve com antecedência.',
+      'De Olhão para o Aeroporto de Faro e do aeroporto para Olhão. Cerca de 20 a 25 minutos. Para voos cedo ou tarde, reserve com antecedência.',
 
     SERVICE_2_TITLE: 'Viagens em Olhão',
     SERVICE_2_DESC:
@@ -45,13 +45,13 @@ export const translations = {
     ABOUT_TEXT_1:
       'A Táxis Restauração é um táxi familiar em Olhão desde 2000. Quem atende o telefone é o motorista que o vai levar.',
     ABOUT_TEXT_2:
-      'Para viagens cedo de manhã ou à noite, por exemplo para um voo, ligue ou envie mensagem com antecedência.',
+      'Para viagens cedo de manhã ou ao fim do dia, por exemplo para um voo, ligue ou envie mensagem com antecedência.',
 
     // FAQ
     FAQ_HEADER: 'Perguntas frequentes',
     FAQ: [
       {
-        q: 'Qual é o número de táxi?',
+        q: 'Qual é o número de táxi em Olhão?',
         a: 'O contacto da Táxis Restauração é 964 468 494 (+351 964 468 494), por telefone ou WhatsApp.',
       },
       {
@@ -81,7 +81,7 @@ export const translations = {
   fr: {
     TITLE_TAG: 'Taxi Olhão · +351 964 468 494 | Táxis Restauração',
     DESCRIPTION_TAG:
-      "Taxi à Olhão depuis 2000. Appelez le +351 964 468 494 ou écrivez sur WhatsApp. Courses à Olhão, vers l'aéroport de Faro et dans toute l'Algarve.",
+      "Taxi à Olhão depuis 2000. Appelez le +351 964 468 494 ou écrivez sur WhatsApp. Courses à Olhão, vers l'aéroport de Faro et dans tout l'Algarve.",
     LOGO_ALT: 'Táxis Restauração, taxi à Olhão',
     THIS_LANGUAGE: 'Français',
 
@@ -95,7 +95,7 @@ export const translations = {
     HERO_BADGE: 'Táxis Restauração, depuis 2000',
     MAIN_HEADER: 'Taxi à Olhão',
     MAIN_HEADER_DESCRIPTION:
-      "Appelez le +351 964 468 494 ou écrivez sur WhatsApp. Courses à Olhão, vers l'aéroport de Faro et dans toute l'Algarve.",
+      "Appelez le +351 964 468 494 ou écrivez sur WhatsApp. Courses à Olhão, vers l'aéroport de Faro et dans tout l'Algarve.",
     CTA_CALL: 'Appeler',
     CTA_WHATSAPP: 'WhatsApp',
 
@@ -105,7 +105,7 @@ export const translations = {
 
     SERVICE_1_TITLE: "Taxi pour l'aéroport de Faro",
     SERVICE_1_DESC:
-      "D'Olhão à l'aéroport de Faro et de l'aéroport à Olhão. Environ 20 minutes. Pour un vol tôt ou tard, réservez à l'avance.",
+      "D'Olhão à l'aéroport de Faro et de l'aéroport à Olhão. Environ 20 à 25 minutes. Pour un vol tôt ou tard, réservez à l'avance.",
 
     SERVICE_2_TITLE: 'Courses à Olhão',
     SERVICE_2_DESC: 'En ville et aux alentours, à Quelfes, Pechão et Moncarapacho.',
@@ -128,7 +128,7 @@ export const translations = {
         a: 'Le numéro de Táxis Restauração est le +351 964 468 494, par téléphone ou WhatsApp.',
       },
       {
-        q: "Combien de temps d'Olhão à l'aéroport de Faro ?",
+        q: "Combien de temps faut-il pour aller d'Olhão à l'aéroport de Faro ?",
         a: 'Environ 20 km, en général 20 à 25 minutes en taxi.',
       },
       {
@@ -178,7 +178,7 @@ export const translations = {
 
     SERVICE_1_TITLE: 'Faro Airport taxi',
     SERVICE_1_DESC:
-      'From Olhão to Faro Airport and from the airport to Olhão. About 20 minutes. For early or late flights, book ahead.',
+      'From Olhão to Faro Airport and from the airport to Olhão. About 20 to 25 minutes. For early or late flights, book ahead.',
 
     SERVICE_2_TITLE: 'Rides in Olhão',
     SERVICE_2_DESC: 'Around town and nearby, in Quelfes, Pechão and Moncarapacho.',
@@ -194,7 +194,7 @@ export const translations = {
       'For an early morning or late trip, such as a flight, call or message ahead to book.',
 
     // FAQ
-    FAQ_HEADER: 'Questions',
+    FAQ_HEADER: 'Frequently asked questions',
     FAQ: [
       {
         q: 'What is the taxi phone number?',
