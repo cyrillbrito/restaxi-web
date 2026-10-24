@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://taxisrestauracao.pt',
   i18n: {
     defaultLocale: 'pt',
     locales: ['pt', 'fr', 'en'],

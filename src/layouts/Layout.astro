@@ -1,6 +1,7 @@
 ---
+import '@fontsource-variable/inter';
 import type { Locale } from '../i18n/translations';
-import { getTranslations } from '../i18n/utils';
+import { getTranslations, locales, localePath, SITE_URL } from '../i18n/utils';
 
 interface Props {
   locale: Locale;
@@ -9,45 +10,55 @@ interface Props {
 const { locale } = Astro.props;
 const t = getTranslations(locale);
 
-const currentUrl = locale === 'pt' ? t.URL : `${t.URL}/${locale}`;
+const currentUrl = `${SITE_URL}${localePath(locale)}`;
+const ogImage = `${SITE_URL}/og-image.png`;
+const ogLocales: Record<Locale, string> = { pt: 'pt_PT', fr: 'fr_FR', en: 'en_GB' };
 
 const structuredData = {
   '@context': 'https://schema.org',
-  '@type': 'TaxiService',
+  '@type': 'LocalBusiness',
+  '@id': `${SITE_URL}/#business`,
   name: 'Táxis Restauração',
   description: t.DESCRIPTION_TAG,
-  url: t.URL,
+  url: currentUrl,
   telephone: '+351964468494',
   email: 'taxisrestauracao@gmail.com',
   foundingDate: '2000',
-  areaServed: {
-    '@type': 'City',
-    name: 'Olhão',
-    containedInPlace: {
-      '@type': 'AdministrativeArea',
-      name: 'Algarve, Portugal',
-    },
-  },
+  knowsLanguage: ['pt', 'fr', 'en'],
+  logo: `${SITE_URL}/logo.png`,
+  image: ogImage,
+  priceRange: '€€',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Olhão',
-    addressRegion: 'Algarve',
+    postalCode: '8700',
+    addressRegion: 'Faro',
     addressCountry: 'PT',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: '37.0256',
-    longitude: '-7.8411',
+    latitude: 37.0256,
+    longitude: -7.8411,
   },
+  areaServed: [
+    'Olhão',
+    'Faro',
+    'Aeroporto de Faro',
+    'Tavira',
+    'Fuseta',
+    'Moncarapacho',
+    'Algarve',
+  ].map((name) => ({ '@type': 'Place', name })),
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     opens: '00:00',
     closes: '23:59',
   },
-  priceRange: '$$',
-  image: `${t.URL}/favicon.ico`,
-  sameAs: [],
+  makesOffer: {
+    '@type': 'Offer',
+    itemOffered: { '@type': 'TaxiService', name: t.SERVICE_1_TITLE },
+  },
 };
 ---
 
@@ -57,60 +68,39 @@ const structuredData = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={t.DESCRIPTION_TAG} />
-    <meta name="theme-color" content="#1F2041" />
+    <meta name="theme-color" content="#262626" />
 
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <!-- Canonical & Language Alternates -->
     <link rel="canonical" href={currentUrl} />
-    <link rel="alternate" href={t.URL} hreflang="pt" />
-    <link rel="alternate" href={`${t.URL}/fr`} hreflang="fr" />
-    <link rel="alternate" href={`${t.URL}/en`} hreflang="en" />
-    <link rel="alternate" href={t.URL} hreflang="x-default" />
+    {locales.map((l) => <link rel="alternate" href={`${SITE_URL}${localePath(l)}`} hreflang={l} />)}
+    <link rel="alternate" href={`${SITE_URL}/`} hreflang="x-default" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content={currentUrl} />
     <meta property="og:title" content={t.TITLE_TAG} />
     <meta property="og:description" content={t.DESCRIPTION_TAG} />
-    <meta property="og:image" content={`${t.URL}/favicon.ico`} />
-    <meta
-      property="og:locale"
-      content={locale === 'pt' ? 'pt_PT' : locale === 'fr' ? 'fr_FR' : 'en_GB'}
-    />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={t.LOGO_ALT} />
+    <meta property="og:locale" content={ogLocales[locale]} />
+    {
+      locales
+        .filter((l) => l !== locale)
+        .map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)
+    }
     <meta property="og:site_name" content="Táxis Restauração" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={t.TITLE_TAG} />
     <meta name="twitter:description" content={t.DESCRIPTION_TAG} />
+    <meta name="twitter:image" content={ogImage} />
 
-    <!-- Additional SEO -->
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Táxis Restauração" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YX1VQ3FMY1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'G-YX1VQ3FMY1');
-    </script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <meta name="generator" content={Astro.generator} />
     <title>{t.TITLE_TAG}</title>
 
     <!-- Structured Data -->
@@ -129,21 +119,27 @@ const structuredData = {
   }
 
   :root {
-    --color-primary: #1f2041;
-    --color-primary-light: #4b3f72;
-    --color-accent: #ffd93d;
-    --color-accent-dark: #f6b93b;
-    --color-success: #6fcf97;
-    --color-text: #333;
-    --color-text-light: #666;
+    /* Taken from the logo: taxi yellow on charcoal */
+    --color-primary: #262626;
+    --color-primary-light: #333333;
+    --color-accent: #fed136;
+    --color-accent-dark: #f2c200;
+    --color-text: #262626;
+    --color-text-light: #5c5c5c;
+    --color-border: #e7e5e0;
     --color-bg: #ffffff;
-    --color-bg-alt: #f8f9fa;
-    --font-sans: 'Inter', system-ui, sans-serif;
-    --font-display: 'Playfair Display', Georgia, serif;
+    --color-bg-alt: #f7f6f3;
+    --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
   }
 
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Keep anchor targets clear of the fixed navbar */
+  [id] {
+    scroll-margin-top: 4.5rem;
   }
 
   html,

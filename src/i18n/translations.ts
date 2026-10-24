@@ -7,6 +7,12 @@ export const translations = {
     LOGO_ALT: 'Logotipo da Táxis Restauração - Serviço de Táxi em Olhão',
     THIS_LANGUAGE: 'Português',
 
+    // Nav
+    NAV_SERVICES: 'Serviços',
+    NAV_ABOUT: 'Sobre nós',
+    NAV_CONTACTS: 'Contactos',
+    STICKY_CALL: 'Ligar',
+
     // Hero
     HERO_BADGE: 'Desde 2000 ao seu serviço',
     MAIN_HEADER: 'O Seu Táxi de Confiança em Olhão',
@@ -25,7 +31,7 @@ export const translations = {
 
     SERVICE_2_TITLE: 'Viagens Turísticas',
     SERVICE_2_DESC:
-      'Descubra as melhores praias e locais do Algarve. Passeios personalizados por Tavira, Fuseta, Ria Formosa e muito mais.',
+      'Descubra o melhor do Algarve por estrada. Passeios personalizados a Tavira, Fuseta, Moncarapacho, Faro e muito mais.',
 
     SERVICE_3_TITLE: 'Táxi 24 Horas',
     SERVICE_3_DESC:
@@ -72,7 +78,7 @@ export const translations = {
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
 
     // Footer
-    COPYRIGHT: '© 2025 Táxis Restauração. Todos os direitos reservados.',
+    RIGHTS_RESERVED: 'Todos os direitos reservados.',
     FOOTER_TAGLINE: 'O seu táxi de confiança em Olhão desde 2000',
   },
   fr: {
@@ -82,6 +88,12 @@ export const translations = {
       'Service de taxi professionnel à Olhão et en Algarve depuis 2000. Transferts aéroport Faro, excursions touristiques, taxi 24h. Appelez +351 964 468 494.',
     LOGO_ALT: 'Logo Táxis Restauração - Service de Taxi à Olhão',
     THIS_LANGUAGE: 'Français',
+
+    // Nav
+    NAV_SERVICES: 'Services',
+    NAV_ABOUT: 'À propos',
+    NAV_CONTACTS: 'Contact',
+    STICKY_CALL: 'Appeler',
 
     // Hero
     HERO_BADGE: 'À votre service depuis 2000',
@@ -101,7 +113,7 @@ export const translations = {
 
     SERVICE_2_TITLE: 'Excursions Touristiques',
     SERVICE_2_DESC:
-      "Découvrez les meilleures plages et sites de l'Algarve. Excursions personnalisées à Tavira, Fuseta, Ria Formosa et plus.",
+      "Découvrez le meilleur de l'Algarve par la route. Excursions personnalisées à Tavira, Fuseta, Moncarapacho, Faro et plus.",
 
     SERVICE_3_TITLE: 'Taxi 24 Heures',
     SERVICE_3_DESC:
@@ -148,7 +160,7 @@ export const translations = {
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
 
     // Footer
-    COPYRIGHT: '© 2025 Táxis Restauração. Tous droits réservés.',
+    RIGHTS_RESERVED: 'Tous droits réservés.',
     FOOTER_TAGLINE: 'Votre taxi de confiance à Olhão depuis 2000',
   },
   en: {
@@ -158,6 +170,12 @@ export const translations = {
       'Professional taxi service in Olhão and Algarve since 2000. Faro airport transfers, tourist trips, 24-hour taxi. Call +351 964 468 494.',
     LOGO_ALT: 'Táxis Restauração Logo - Taxi Service in Olhão',
     THIS_LANGUAGE: 'English',
+
+    // Nav
+    NAV_SERVICES: 'Services',
+    NAV_ABOUT: 'About',
+    NAV_CONTACTS: 'Contact',
+    STICKY_CALL: 'Call',
 
     // Hero
     HERO_BADGE: 'Serving you since 2000',
@@ -177,7 +195,7 @@ export const translations = {
 
     SERVICE_2_TITLE: 'Tourist Tours',
     SERVICE_2_DESC:
-      'Discover the best beaches and sites in the Algarve. Customized tours to Tavira, Fuseta, Ria Formosa and more.',
+      'Discover the best of the Algarve by road. Customized tours to Tavira, Fuseta, Moncarapacho, Faro and more.',
 
     SERVICE_3_TITLE: '24-Hour Taxi',
     SERVICE_3_DESC:
@@ -223,7 +241,7 @@ export const translations = {
     ADDRESS_DESC: 'Olhão, Algarve, Portugal',
 
     // Footer
-    COPYRIGHT: '© 2025 Táxis Restauração. All rights reserved.',
+    RIGHTS_RESERVED: 'All rights reserved.',
     FOOTER_TAGLINE: 'Your trusted taxi in Olhão since 2000',
   },
 } as const;
