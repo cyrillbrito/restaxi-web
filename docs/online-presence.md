@@ -28,6 +28,7 @@ From the profile's "Desempenho" page, seen on 24 Oct 2026 (October is only partl
 - Website clicks: about 15 a month, peaking at about 25 in September.
 
 What this means:
+
 - The profile does most of the work: for every click to the website there are 3 or 4 direct calls. Improving the profile (photos, reviews, services) matters more than the site.
 - Full list ("Ver mais") also has: "taxi olhão" 23, "taxi armona" 18, "taxi armona olhao" 18, "taxi olhao faro airport" 18, "taxis olhao contacto" 16, then many under 15: "aqua taxi olhao (armona / farol)", "bateau taxi olhão", "olhao wassertaxi", "numero taxi olhao", "olhão taxi phone number 24 hours", "empresas de transfers olhao", "central taxis olhao".
 - About 100 searches (Armona, Farol, aqua/bateau/wassertaxi) are people looking for a water taxi to the islands, in PT, FR, DE and EN. Google shows this profile to them, but a road taxi can't take them.
@@ -45,6 +46,7 @@ The listing is the main source of calls; most people call straight from Maps and
 - Because it is a service-area business it does not show up in the `business.google.com/add` search. Manage it by searching the name on Google while signed in.
 
 To do:
+
 - Replace the photos (they show the Olhão market, not the taxi). Add 10+ real ones: car outside and inside, driver, airport pickup.
 - Fill in services (airport transfer, tours, 24h taxi, business), and the description in PT, mentioning FR and EN.
 - Set the website link with UTM tags: `https://taxisrestauracao.pt/?utm_source=google&utm_medium=organic&utm_campaign=gbp`.
@@ -72,6 +74,7 @@ Other listings to claim with the same name and phone: Apple Business Connect, Bi
 ## SEO notes
 
 Fixed in Oct 2026:
+
 - Canonical and hreflang pointed to `/en` and `/fr`, which redirect. They now use `/en/` and `/fr/`.
 - Share image was `favicon.ico`. Now `public/og-image.png` (1200×630).
 - Schema was `TaxiService` (a Service, not a business). Now `LocalBusiness` with areas served.
@@ -79,6 +82,7 @@ Fixed in Oct 2026:
 - Added a real 404 page (before, any URL returned the homepage with 200).
 
 Ideas, not done:
+
 - A Faro airport page in each language, with pickup steps, distance and typical metered fare. Avoid a public fixed-price table: Decreto-Lei 101/2023 and AMT Regulamento 1324-A/2026 restrict it.
 - A German version (Germans are the second biggest tourist group in the Algarve after the UK).
 - Check claims on the site with the family: flight monitoring with free waiting, business transport, "modern vehicles".

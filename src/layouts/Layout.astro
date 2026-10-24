@@ -75,7 +75,9 @@ const structuredData = {
 
     <!-- Canonical & Language Alternates -->
     <link rel="canonical" href={currentUrl} />
-    {locales.map((l) => <link rel="alternate" href={`${SITE_URL}${localePath(l)}`} hreflang={l} />)}
+    {locales.map((l) => (
+      <link rel="alternate" href={`${SITE_URL}${localePath(l)}`} hreflang={l} />
+    ))}
     <link rel="alternate" href={`${SITE_URL}/`} hreflang="x-default" />
 
     <!-- Open Graph -->
@@ -88,11 +90,11 @@ const structuredData = {
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={t.LOGO_ALT} />
     <meta property="og:locale" content={ogLocales[locale]} />
-    {
-      locales
-        .filter((l) => l !== locale)
-        .map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)
-    }
+    {locales
+      .filter((l) => l !== locale)
+      .map((l) => (
+        <meta property="og:locale:alternate" content={ogLocales[l]} />
+      ))}
     <meta property="og:site_name" content="Táxis Restauração" />
 
     <!-- Twitter Card -->

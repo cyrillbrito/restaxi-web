@@ -61,10 +61,18 @@ const reasons = [
       <span>Táxis Restauração</span>
     </a>
     <div class="nav-right">
-      <a href="#services" class="nav-link hide-mobile">{t.NAV_SERVICES}</a>
-      <a href="#about" class="nav-link hide-mobile">{t.NAV_ABOUT}</a>
-      <a href="#contacts" class="nav-link hide-mobile">{t.NAV_CONTACTS}</a>
-      <a href={`tel:${PHONE}`} class="nav-phone hide-mobile" data-location="nav">{PHONE_DISPLAY}</a>
+      <a href="#services" class="nav-link hide-mobile">
+        {t.NAV_SERVICES}
+      </a>
+      <a href="#about" class="nav-link hide-mobile">
+        {t.NAV_ABOUT}
+      </a>
+      <a href="#contacts" class="nav-link hide-mobile">
+        {t.NAV_CONTACTS}
+      </a>
+      <a href={`tel:${PHONE}`} class="nav-phone hide-mobile" data-location="nav">
+        {PHONE_DISPLAY}
+      </a>
       <LanguageSwitcher currentLocale={locale} />
     </div>
   </div>
@@ -88,7 +96,8 @@ const reasons = [
         >
           <path d={phonePath}></path>
         </svg>
-        {t.CTA_CALL}<span class="btn-number">· {PHONE_DISPLAY}</span>
+        {t.CTA_CALL}
+        <span class="btn-number">· {PHONE_DISPLAY}</span>
       </a>
       <a
         href={WHATSAPP}
@@ -114,28 +123,26 @@ const reasons = [
         <p>{t.SERVICES_SUBTITLE}</p>
       </div>
       <div class="services-grid">
-        {
-          services.map((s) => (
-            <div class="service-card">
-              <div class="service-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  aria-hidden="true"
-                  set:html={s.icon}
-                />
-              </div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
+        {services.map((s) => (
+          <div class="service-card">
+            <div class="service-icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+                set:html={s.icon}
+              />
             </div>
-          ))
-        }
+            <h3>{s.title}</h3>
+            <p>{s.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -147,15 +154,13 @@ const reasons = [
         <p>{t.WHY_US_SUBTITLE}</p>
       </div>
       <div class="features-grid">
-        {
-          reasons.map((r) => (
-            <div class="feature">
-              <div class="feature-stat">{r.stat}</div>
-              <h3>{r.title}</h3>
-              <p>{r.desc}</p>
-            </div>
-          ))
-        }
+        {reasons.map((r) => (
+          <div class="feature">
+            <div class="feature-stat">{r.stat}</div>
+            <h3>{r.title}</h3>
+            <p>{r.desc}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -206,7 +211,9 @@ const reasons = [
       <strong>Táxis Restauração</strong>
       <span>{t.FOOTER_TAGLINE}</span>
     </div>
-    <p class="footer-copyright">© {year} Táxis Restauração. {t.RIGHTS_RESERVED}</p>
+    <p class="footer-copyright">
+      © {year} Táxis Restauração. {t.RIGHTS_RESERVED}
+    </p>
   </div>
 </footer>
 
